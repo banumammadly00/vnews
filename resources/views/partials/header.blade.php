@@ -371,10 +371,10 @@
 
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children page_item page-item-114 no-mega-menu"><a href="#">World</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-109 no-mega-menu"><a href="category/travel/index.html">Travel</a></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-111 no-mega-menu"><a href="category/lifestyle/photography/index.html">Photography</a></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-112 no-mega-menu"><a href="category/lifestyle/news/index.html">News</a></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-113 no-mega-menu"><a href="category/food/index.html">Food</a></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-109 no-mega-menu"><a href="category/travel/index.html">Europe</a></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-111 no-mega-menu"><a href="category/lifestyle/photography/index.html">Asia</a></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-112 no-mega-menu"><a href="category/lifestyle/news/index.html">America</a></li>
+                                            {{--<li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-113 no-mega-menu"><a href="category/food/index.html">Food</a></li>--}}
                                         </ul>
                                     </li>
 
