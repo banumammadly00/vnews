@@ -5,7 +5,6 @@
                 <div class="block footer-widget-1">
                     <div id="vmagazine_recent_post-2" class="widget widget_vmagazine_recent_post">
                         <h4 class="block-title"><span class="title-bg">Recent Posts </span></h4>
-
                         <div class="vmagazine-rec-posts recent-post-widget block_layout_2">
                            {{-- <div class="recent-posts-content wow fadeInUp">
                                 <div class="image-recent-post post-thumb">
@@ -227,7 +226,7 @@
 </script>
 <script type='text/javascript'>
     /* <![CDATA[ */
-    var frontend_ajax_object = {"ajax_url":"https:\/\/demo.accesspressthemes.com\/vnews\/wp-admin\/admin-ajax.php","ajax_nonce":"6996839e22"};
+    var frontend_ajax_object = {"ajax_url":"https:\/\/demo.accesspressthemes.com\/vmagazine\/demo-one\/wp-admin\/admin-ajax.php","ajax_nonce":"6996839e22"};
     var frontend_js_object = {"delay_time":"0","whatsapp_hide":"0","viber_hide":"0","sms_hide":"0","messenger_hide":"0","hide_popup_overlay":"0"};
     /* ]]> */
 </script>
@@ -236,7 +235,7 @@
 <script type='text/javascript' src='/vnews/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
-    var wc_add_to_cart_params = {"ajax_url":"\/vnews\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/vnews\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/demo.accesspressthemes.com\/vnews\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+    var wc_add_to_cart_params = {"ajax_url":"\/vnews\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/vmagazine\/demo-one\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/demo.accesspressthemes.com\/vmagazine\/demo-one\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
     /* ]]> */
 </script>
 <script type='text/javascript' src='/vnews/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min9e95.js?ver=3.8.0'></script>
@@ -266,7 +265,7 @@
 <script type='text/javascript' src='/vnews/wp-content/themes/vmagazine/assets/library/slick/slick.min5a2c.js?ver=1.1.7'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
-    var vmagazine_ajax_script = {"mode":"enable","ajax_search":"show","ajaxurl":"https:\/\/demo.accesspressthemes.com\/vnews\/wp-admin\/admin-ajax.php","fileUrl":"https:\/\/demo.accesspressthemes.com\/vnews\/wp-content\/themes\/vmagazine","lazy":"enable","controls":"1","rtl":"false","preloader":"hide","stickyHeader":"show"};
+    var vmagazine_ajax_script = {"mode":"enable","ajax_search":"show","ajaxurl":"https:\/\/demo.accesspressthemes.com\/vmagazine\/demo-one\/wp-admin\/admin-ajax.php","fileUrl":"https:\/\/demo.accesspressthemes.com\/vmagazine\/demo-one\/wp-content\/themes\/vmagazine","lazy":"enable","controls":"1","rtl":"false","preloader":"hide","stickyHeader":"show"};
     /* ]]> */
 </script>
 <script type='text/javascript' src='/vnews/wp-content/themes/vmagazine/assets/js/vmagazine-custom5a2c.js?ver=1.1.7'></script>

@@ -9,45 +9,54 @@
                         <div id="panel-38-0-0-0" class="so-panel widget widget_vmagazine_tab_posts_list vmagazine_tab_posts_list panel-first-child panel-last-child" data-index="0">
                             <div class="panel-widget-style panel-widget-style-for-38-0-0-0">
                                 <div class="vmagazine-fullwid-slider block-post-wrapper block_layout_2" data-count="10">
-
+                                    <!----------------------- Main news ----------------------->
                                     <div class="slick-wrap sl-before-load">
+                                        @foreach($main_news as $news)
                                         <div class="single-post clearfix">
                                             <div class="post-thumb">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
+                                                <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                                                 <div class="image-overlay"></div>
                                             </div><!-- .post-thumb -->
                                             <div class="post-content-wrapper clearfix">
-                                                <span class="cat-links"><a href="/vnews/category/fun/index.html" class="cat-53" rel="category tag">Fun</a><a href="category/sports/index.html" class="cat-30" rel="category tag">Sports</a></span>
+                                                <span class="cat-links"><a href="/vnews/category/fun/index.html" class="cat-53" rel="category tag">{{  $category_name($news->category) }}</a>
+                                                @if($news->sub_category)
+                                                <a href="category/sports/index.html" class="cat-30" rel="category tag">{{  $category_name( $news->sub_category ) }}</a>
+                                                @endif
+                                                </span>
                                                 <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div><!-- .post-meta -->
+                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
+                                                    <span class="comments"><i class="fa fa-comments"></i> {{ $news->comment }} </span>
+                                                    <span class="post-view"><i class="fa fa-eye"></i> {{ $news->read }} </span>
+                                                </div><!-- .post-meta -->
                                                 <h3 class="extra-large-font">
                                                     <a href="with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                        </a>
+                                                        {{$news->title}}  </a>
                                                 </h3>
 
                                             </div><!-- .post-content-wrapper -->
 
-                                        </div><!-- .single-post  -->
+                                        </div>
+                                       @endforeach
                                     </div>
 
-                                    <!-- block-post-wrapper -->
                                     <div class="vmagazine-container">
                                         <div class="posts-tab-wrap sl-before-load">
+                                            @foreach($main_news as $news)
                                             <div class="single-post clearfix">
                                                 <div class="slider-nav-inner-wrapper">
                                                     <div class="post-thumb">
                                                         <a href="javascript:void(0)" class="thumb-zoom">
-                                                            <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-320x224.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
+                                                            <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title=""/>
                                                             <div class="image-overlay"></div>
                                                         </a>
                                                     </div><!-- .post-thumb -->
                                                     <div class="post-caption-wrapper">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span>                            <h3 class="large-font">
-                                                            Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                            </h3>
-
+                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>{{date('M j, Y', strtotime($news->updated))}}</span>
+                                                        <h3 class="large-font"> {{ $news->title }} </h3>
                                                     </div><!-- .post-caption-wrapper -->
                                                 </div><!-- .slider-nav-inner-wrapper -->
                                             </div>
+                                           @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -61,107 +70,34 @@
                 <div class="panel-row-style panel-row-style-for-38-1" >
                     <div id="pgc-38-1-0"  class="panel-grid-cell" >
                         <div id="panel-38-1-0-0" class="so-panel widget widget_vmagazine_block_posts_column vmagazine_block_posts_column panel-first-child panel-last-child" data-index="1"><div class="panel-widget-style panel-widget-style-for-38-1-0-0">        <div class="wrapper-vmagazine-post-col block_layout_3">
-                                    <h4 class="block-title"><span class="title-bg"> Recent News    </span></h4>
+                                    <h4 class="block-title"><span class="title-bg"> Recent News  </span></h4>
                                     <div class="vmagazine-post-col block-post-wrapper block_layout_3 wow zoomIn" data-wow-duration="1s">
                                         <div class="block-header clearfix">
-                                        </div><!-- .block-header-->
+                                        </div>
+                                        <!--------------------------- Recent News ---------------------->
+                                        @foreach($recent_news as $news)
                                         <div class="single-post first-post clearfix">
                                             <div class="post-thumb">
-                                                <a class="thumb-zoom" href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS">
-                                                    <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-510x369.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
+                                                <a class="thumb-zoom" href="" title="">
+                                                    <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                                                     <div class="image-overlay"></div>
                                                 </a>
                                             </div>
                                             <div class="content-wrapper">
                                                 <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div><!-- .post-meta -->
+                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{date('M j, Y', strtotime($news->updated))}}</span>
+                                                    <span class="comments"><i class="fa fa-comments"></i> {{ $news->comment }}</span>
+                                                    <span class="post-view"><i class="fa fa-eye"></i> {{ $news->read }} </span>
+                                                </div><!-- .post-meta -->
                                                 <h3 class="small-font">
-                                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                    </a>
+                                                    <a href="">
+                                                        {{ $news->title }}
+                                                   </a>
                                                 </h3>
                                             </div><!-- .content-wrapper -->
-                                        </div><!-- .single-post -->
-                                        <div class="single-post first-post clearfix">
-                                            <div class="post-thumb">
-                                                <a class="thumb-zoom" href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS">
-                                                    <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-510x369.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
-                                                    <div class="image-overlay"></div>
-                                                </a>
-                                            </div>
-                                            <div class="content-wrapper">
-                                                <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div><!-- .post-meta -->
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                    </a>
-                                                </h3>
-                                            </div><!-- .content-wrapper -->
-                                        </div><!-- .single-post -->
-                                        <div class="single-post first-post clearfix">
-                                            <div class="post-thumb">
-                                                <a class="thumb-zoom" href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS">
-                                                    <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-510x369.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
-                                                    <div class="image-overlay"></div>
-                                                </a>
-                                            </div>
-                                            <div class="content-wrapper">
-                                                <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div><!-- .post-meta -->
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                    </a>
-                                                </h3>
-                                            </div><!-- .content-wrapper -->
-                                        </div><!-- .single-post -->
-                                        <div class="single-post first-post clearfix">
-                                            <div class="post-thumb">
-                                                <a class="thumb-zoom" href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS">
-                                                    <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-510x369.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
-                                                    <div class="image-overlay"></div>
-                                                </a>
-                                            </div>
-                                            <div class="content-wrapper">
-                                                <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div><!-- .post-meta -->
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                    </a>
-                                                </h3>
-                                            </div><!-- .content-wrapper -->
-                                        </div><!-- .single-post -->
-                                        <div class="single-post first-post clearfix">
-                                            <div class="post-thumb">
-                                                <a class="thumb-zoom" href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS">
-                                                    <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-510x369.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
-                                                    <div class="image-overlay"></div>
-                                                </a>
-                                            </div>
-                                            <div class="content-wrapper">
-                                                <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div><!-- .post-meta -->
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                    </a>
-                                                </h3>
-                                            </div><!-- .content-wrapper -->
-                                        </div><!-- .single-post -->
-                                        <div class="single-post first-post clearfix">
-                                            <div class="post-thumb">
-                                                <a class="thumb-zoom" href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS">
-                                                    <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-510x369.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
-                                                    <div class="image-overlay"></div>
-                                                </a>
-                                            </div>
-                                            <div class="content-wrapper">
-                                                <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div><!-- .post-meta -->
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                    </a>
-                                                </h3>
-                                            </div><!-- .content-wrapper -->
-                                        </div><!-- .single-post -->
-                                    </div><!-- .block-post-wrapper -->
+                                        </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +106,7 @@
                         <div id="panel-38-1-1-0" class="so-panel widget widget_vmagazine_block_posts_column vmagazine_block_posts_column panel-first-child" data-index="2">
                             <div class="panel-widget-style panel-widget-style-for-38-1-1-0">
                                 <div class="wrapper-vmagazine-post-col block_layout_1">
-                                      <h4 class="block-title"><span class="title-bg">Top Trending News    </span></h4>
+                                      <h4 class="block-title"><span class="title-bg">Top Trending News  </span></h4>
                             <div class="vmagazine-post-col block-post-wrapper block_layout_1 wow zoomIn" data-wow-duration="1s">
                                 <div class="block-header clearfix">
                                         </div><!-- .block-header-->
@@ -259,169 +195,61 @@
                                     <div class="section-wrapper clearfix">
                                         <div class="slider-section slider-fullwidth">
                                             <ul class="featuredSlider cS-hidden">
+                                                <!---------------------------- Travel News ---------------------------->
+                                                @foreach( $category_news(15,4) as $news )
                                                 <li class="slide">
-                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/111-600x400.jpg" alt="" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS">
+                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="image" title="">
                                                     <div class="slider-caption">
                                                         <span class="cat-links">
-                                                            <a href="/vnews/category/fun/index.html" class="cat-53" rel="category tag">Fun</a>
-                                                            <a href="/vnews/category/sports/index.html" class="cat-30" rel="category tag">Sports</a></span>
+                                                            <a href="" class="cat-53" rel="category tag">Fun</a>
+                                                            <a href="" class="cat-30" rel="category tag">Sports</a></span>
                                                         <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span>
-                                                            <span class="comments"><i class="fa fa-comments"></i>3941</span>
-                                                            <span class="post-view"><i class="fa fa-eye"></i>505285</span>
+                                                            <span class="posted-on"><i class="fa fa-clock-o"></i> {{ date('M j, Y', strtotime($news->updated)) }} </span>
+                                                            <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
+                                                            <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                         </div>
 
                                                         <h3 class="featured large-font">
-                                                            <a href="with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                                Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS
+                                                            <a href="">
+                                                             {{ $news->title }}
                                                             </a>
                                                         </h3>
                                                     </div>
                                                 </li>
-                                                <li class="slide">
-                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/imgx1-600x400.jpg" alt="" title="World Renown Speaker Zackery  Stumped Ethic on a serious note">
-                                                    <div class="slider-caption">
-                                                        <span class="cat-links"><a href="category/entertainment/index.html" class="cat-27" rel="category tag">Entertainment</a><a href="category/fun/index.html" class="cat-53" rel="category tag">Fun</a><a href="category/gaming/index.html" class="cat-28" rel="category tag">Gaming</a><a href="category/science/index.html" class="cat-33" rel="category tag">Science</a></span>                                        <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>1795</span><span class="post-view"><i class="fa fa-eye"></i>134034</span>                                        </div>
 
-                                                        <h3 class="featured large-font">
-                                                            <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                                                World Renown Speaker Zackery  Stumped Ethic on a serious note                                            </a>
-                                                        </h3>
-
-                                                    </div>
-
-                                                </li>
-                                                <li class="slide">
-                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/imgx3-600x400.jpg" alt="" title="How to Refresh Your Purse Game in a Snap and Play">
-                                                    <div class="slider-caption">
-                                                        <span class="cat-links"><a href="/vnews/category/entertainment/index.html" class="cat-27" rel="category tag">Entertainment</a><a href="category/science/index.html" class="cat-33" rel="category tag">Science</a><a href="category/swiming/index.html" class="cat-54" rel="category tag">Swimming</a></span>                                        <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>48</span><span class="post-view"><i class="fa fa-eye"></i>2662</span>                                        </div>
-
-                                                        <h3 class="featured large-font">
-                                                            <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                                                How to Refresh Your Purse Game in a Snap and Play                                            </a>
-                                                        </h3>
-
-                                                    </div>
-
-                                                </li>
-                                                <li class="slide">
-                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/imagx4-600x400.jpg" alt="" title="Prejudiced? My kids are black, says Kate Middleton">
-                                                    <div class="slider-caption">
-                                                        <span class="cat-links"><a href="/vnews/category/entertainment/index.html" class="cat-27" rel="category tag">Entertainment</a><a href="category/science/index.html" class="cat-33" rel="category tag">Science</a></span>                                        <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>3087</span><span class="post-view"><i class="fa fa-eye"></i>39529</span>                                        </div>
-
-                                                        <h3 class="featured large-font">
-                                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                                                Prejudiced? My kids are black, says Kate Middleton                                            </a>
-                                                        </h3>
-
-                                                    </div>
-
-                                                </li>
-                                                <li class="slide">
-                                                    <img src="wp-content/uploads/sites/2/2018/04/d6-600x400.jpg" alt="" title="This is a great photo and nice style for shooting outdoor">
-                                                    <div class="slider-caption">
-                                                        <span class="cat-links"><a href="category/entertainment/index.html" class="cat-27" rel="category tag">Entertainment</a><a href="category/science/index.html" class="cat-33" rel="category tag">Science</a></span>                                        <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>51</span><span class="post-view"><i class="fa fa-eye"></i>85107</span>                                        </div>
-
-                                                        <h3 class="featured large-font">
-                                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/index.html">
-                                                                This is a great photo and nice style for shooting outdoor                                            </a>
-                                                        </h3>
-
-                                                    </div>
-
-                                                </li>
+                                                @endforeach
                                             </ul>
                                         </div><!-- .slider-section -->
                                         <div class="featured-posts">
                                             <ul class="featuredpost">
+                                                @foreach( $category_news(15,4) as $news )
                                                 <li class="f-slide post-thumb">
-                                                    <a class="f-slider-img thumb-zoom" href="with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/111-300x200.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
+                                                    <a class="f-slider-img thumb-zoom" href="">
+                                                        <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                                                         <div class="image-overlay"></div>
                                                     </a>
                                                     <div class="slider-caption">
                                                         <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                        </div>
-
+                                                            <span class="posted-on"><i class="fa fa-clock-o"></i> {{ date('M j, Y', strtotime($news->updated)) }} </span>
+                                                            <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
+                                                            <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
+                                                        </div>
                                                         <h3 class="small-font">
-                                                            <a href="with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                                Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                            </a>
+                                                            <a href="">
+                                                                {{ $news->title }}
+                                                            </a>
                                                         </h3>
                                                         <div class="post-content">
-                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+                                                               {{ $news->lead }}
                                                         </div>
-
                                                     </div>
 
                                                 </li>
-                                                <li class="f-slide post-thumb">
-                                                    <a class="f-slider-img thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imgx1-300x200.jpg" alt="World Renown Speaker Zackery  Stumped Ethic on a serious note" title="World Renown Speaker Zackery  Stumped Ethic on a serious note" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                    <div class="slider-caption">
-                                                        <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>1795</span><span class="post-view"><i class="fa fa-eye"></i>134034</span>                                        </div>
-
-                                                        <h3 class="small-font">
-                                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                                                World Renown Speaker Zackery  Stumped Ethic on a serious note                                            </a>
-                                                        </h3>
-                                                        <div class="post-content">
-                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                                                        </div>
-
-                                                    </div>
-
-                                                </li>
-                                                <li class="f-slide post-thumb">
-                                                    <a class="f-slider-img thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imgx3-300x200.jpg" alt="How to Refresh Your Purse Game in a Snap and Play" title="How to Refresh Your Purse Game in a Snap and Play" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                    <div class="slider-caption">
-                                                        <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>48</span><span class="post-view"><i class="fa fa-eye"></i>2662</span>                                        </div>
-
-                                                        <h3 class="small-font">
-                                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                                                How to Refresh Your Purse Game in a Snap and Play                                            </a>
-                                                        </h3>
-                                                        <div class="post-content">
-                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                                                        </div>
-
-                                                    </div>
-
-                                                </li>
-                                                <li class="f-slide post-thumb">
-                                                    <a class="f-slider-img thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imagx4-300x200.jpg" alt="Prejudiced? My kids are black, says Kate Middleton" title="Prejudiced? My kids are black, says Kate Middleton" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                    <div class="slider-caption">
-                                                        <div class="post-meta">
-                                                            <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>3087</span><span class="post-view"><i class="fa fa-eye"></i>39529</span>                                        </div>
-
-                                                        <h3 class="small-font">
-                                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                                                Prejudiced? My kids are black, says Kate Middleton                                            </a>
-                                                        </h3>
-                                                        <div class="post-content">
-                                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                                                        </div>
-
-                                                    </div>
-
-                                                </li>
+                                                @endforeach
                                             </ul>
-                                        </div><!-- .featured-posts -->
-                                    </div><!-- .section-wrapper -->
-                                </div><!-- .featured-slider-wrapper -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -429,65 +257,33 @@
                         <div id="panel-38-1-2-0" class="block_layout_2 so-panel widget widget_vmagazine_category_posts_slider vmagazine_category_posts_slider panel-first-child" data-index="5">
                             <div class="block_layout_2 panel-widget-style panel-widget-style-for-38-1-2-0">
                                 <div class="vmagazine-cat-slider block-post-wrapper block_layout_2 no-bg" >
-                                    <h4 class="block-title"><span class="title-bg">Most Viewed    </span></h4>
+                                    <h4 class="block-title"><span class="title-bg">Most Viewed </span></h4>
+                                    <!-------------------------- Most Viewed ----------------------->
                                     <ul class="widget-cat-slider cS-hidden">
+                                        @foreach($most_viewed as $news)
                                         <li class="single-post clearfix">
                                             <div class="post-thumb">
-                                                <img src="/vnews/wp-content/uploads/sites/2/2018/04/111-400x340.jpg" alt="" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
+                                                <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="image" title="" />
                                             </div>
                                             <div class="post-caption">
                                                 <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>
+                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
+                                                    <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
+                                                    <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                 </div>
                                                 <h3 class="small-font">
-                                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS     </a>
+                                                    <a href="">
+                                                        {{$news->title}}
+                                                    </a>
                                                 </h3>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
-                                        <li class="single-post clearfix">
-                                            <div class="post-thumb">
-                                                <img src="/vnews/wp-content/uploads/sites/2/2018/04/imgx1-400x340.jpg" alt="" title="World Renown Speaker Zackery  Stumped Ethic on a serious note" />
                                             </div>
-                                            <div class="post-caption">
-                                                <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>1795</span><span class="post-view"><i class="fa fa-eye"></i>134034</span>                                    </div>
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                                        World Renown Speaker Zackery  Stumped Ethic on a serious note                                        </a>
-                                                </h3>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
-                                        <li class="single-post clearfix">
-                                            <div class="post-thumb">
-                                                <img src="/vnews/wp-content/uploads/sites/2/2018/04/imgx3-400x340.jpg" alt="" title="How to Refresh Your Purse Game in a Snap and Play" />
-                                            </div>
-                                            <div class="post-caption">
-                                                <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>48</span><span class="post-view"><i class="fa fa-eye"></i>2662</span>                                    </div>
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                                        How to Refresh Your Purse Game in a Snap and Play                                        </a>
-                                                </h3>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
-                                        <li class="single-post clearfix">
-                                            <div class="post-thumb">
-                                                <img src="/vnews/wp-content/uploads/sites/2/2018/04/imagx4-400x340.jpg" alt="" title="Prejudiced? My kids are black, says Kate Middleton" />
-                                            </div>
-                                            <div class="post-caption">
-                                                <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>3087</span><span class="post-view"><i class="fa fa-eye"></i>39529</span>                                    </div>
-                                                <h3 class="small-font">
-                                                    <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                                        Prejudiced? My kids are black, says Kate Middleton                                        </a>
-                                                </h3>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
+                                        </li>
+                                       @endforeach
                                     </ul>        <!-- .content-wrapper -->
                                 </div><!-- .block-post-wrapper -->
                             </div>
                         </div>
+                        <!-------------------------- Advertisement  --------------------->
                         <div id="panel-38-1-2-1" class="so-panel widget widget_vmagazine_medium_ad vmagazine_medium_ad" data-index="6">
                             <div class="vmagazine-medium-rectangle-ad medium-rectangle-wrapper">
                                 <a href="#" target="_blank">
@@ -517,7 +313,8 @@
                                                 </div>
                                             </a>
                                             <a class="apsc-bttn-bg" href="http://twitter.com/" target="_blank" rel="noopener noreferrer"><div class="apsc_bttn">follow</div></a>
-                                        </div>            <div class="apsc-each-profile ">
+                                        </div>
+                                        <div class="apsc-each-profile ">
                                             <a class="apsc-youtube-icon apsc-icon-soc clearfix" href="#" target="_blank" rel="noopener noreferrer">
                                                 <div class="apsc-inner-block">
                                                     <span class="social-icon"><span class="apsc-fa-icon"><i class="apsc-youtube fa fa-youtube"></i></span><span class="media-name"><span class="apsc-social-name">Youtube</span></span></span>
@@ -526,7 +323,8 @@
 
                                             </a>
                                             <a class="apsc-bttn-bg" href="#" target="_blank" rel="noopener noreferrer"><div class="apsc_bttn">subscribe</div></a>
-                                        </div>            <div class="apsc-each-profile ">
+                                        </div>
+                                        <div class="apsc-each-profile ">
                                             <a class="apsc-soundcloud-icon apsc-icon-soc clearfix" href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">
                                                 <div class="apsc-inner-block">
                                                     <span class="social-icon"><span class="apsc-fa-icon"><i class="apsc-soundcloud fa fa-soundcloud"></i></span><span class="media-name"><span class="apsc-social-name">Soundcloud</span></span></span>
@@ -536,10 +334,13 @@
                                             <a class="apsc-bttn-bg" href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer"><div class="apsc_bttn">follow</div></a>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
 
-
-                                </div></div></div><div id="panel-38-1-2-3" class="so-panel widget widget_vmagazine_recent_post panel-last-child" data-index="8"><div class="panel-widget-style panel-widget-style-for-38-1-2-3">    <h4 class="block-title"><span class="title-bg">
-Recent Posts    </span></h4>
+                        <div id="panel-38-1-2-3" class="so-panel widget widget_vmagazine_recent_post panel-last-child" data-index="8">
+                            <div class="panel-widget-style panel-widget-style-for-38-1-2-3">
+                                <h4 class="block-title"><span class="title-bg">Recent Posts</span></h4>
                                 <div class="vmagazine-rec-posts recent-post-widget block_layout_1">
                                     <div class="recent-posts-content wow fadeInUp">
                                         <div class="image-recent-post post-thumb">
@@ -553,138 +354,34 @@ Recent Posts    </span></h4>
                                                 Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                            </a>
                                         </div>
                                     </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imgx1-321x257.jpg" alt="World Renown Speaker Zackery  Stumped Ethic on a serious note" title="World Renown Speaker Zackery  Stumped Ethic on a serious note" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/entertainment/index.html">Entertainment</a></span>                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                                World Renown Speaker Zackery  Stumped Ethic on a serious note                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imgx3-321x257.jpg" alt="How to Refresh Your Purse Game in a Snap and Play" title="How to Refresh Your Purse Game in a Snap and Play" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/entertainment/index.html">Entertainment</a></span>                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                                How to Refresh Your Purse Game in a Snap and Play                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imagx4-321x257.jpg" alt="Prejudiced? My kids are black, says Kate Middleton" title="Prejudiced? My kids are black, says Kate Middleton" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/entertainment/index.html">Entertainment</a></span>                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                                Prejudiced? My kids are black, says Kate Middleton                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d6-321x257.jpg" alt="This is a great photo and nice style for shooting outdoor" title="This is a great photo and nice style for shooting outdoor" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/entertainment/index.html">Entertainment</a></span>                                            <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/index.html">
-                                                This is a great photo and nice style for shooting outdoor                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="et-harum-quidem-rerum-facilis-est-et-expedita-distinctio-3/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/c3-321x257.jpg" alt="25 Things Every Proud Owner of PC Should Do and Learn" title="25 Things Every Proud Owner of PC Should Do and Learn" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/entertainment/index.html">Entertainment</a></span>                                            <a href="et-harum-quidem-rerum-facilis-est-et-expedita-distinctio-3/index.html">
-                                                25 Things Every Proud Owner of PC Should Do and Learn                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="cum-soluta-nobis-est-eligendi-optio-cumque/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/c5-321x257.jpg" alt="Fashion brands up the smartwatch game to advertise more online" title="Fashion brands up the smartwatch game to advertise more online" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/gadgets/index.html">Gadgets</a></span>                                            <a href="cum-soluta-nobis-est-eligendi-optio-cumque/index.html">
-                                                Fashion brands up the smartwatch game to advertise more online                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="sed-ut-perspiciatis-unde-omnis-iste/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d7-321x257.jpg" alt="We need to connect WiFi for make it work Well for Users" title="We need to connect WiFi for make it work Well for Users" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/gadgets/index.html">Gadgets</a></span>                                            <a href="sed-ut-perspiciatis-unde-omnis-iste/index.html">
-                                                We need to connect WiFi for make it work Well for Users                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="quisque-rutrum-aenean-imperdiet-etiam/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/1123-321x257.jpg" alt="Fashion ‘Ironic Pink’ And 4 Other Back-To-School Trends Just With a" title="Fashion ‘Ironic Pink’ And 4 Other Back-To-School Trends Just With a" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/gadgets/index.html">Gadgets</a></span>                                            <a href="quisque-rutrum-aenean-imperdiet-etiam/index.html">
-                                                Fashion ‘Ironic Pink’ And 4 Other Back-To-School Trends Just With a                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="nam-libero-tempore-cum-soluta-nobis-est/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/unnamed-file-321x257.jpg" alt="These Fitness Tips Help Take Inches off Your Waistline" title="These Fitness Tips Help Take Inches off Your Waistline" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/world/index.html">World</a></span>                                            <a href="nam-libero-tempore-cum-soluta-nobis-est/index.html">
-                                                These Fitness Tips Help Take Inches off Your Waistline                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="recent-posts-content wow fadeInUp">
-                                        <div class="image-recent-post post-thumb">
-                                            <a href="donec-pede-justo-fringilla-vel-aliquet-2/index.html" class="thumb-zoom">
-                                                <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/12-1-321x257.jpg" alt="The Workout Plan To Get Ripped Without Breaking" title="The Workout Plan To Get Ripped Without Breaking" />
-                                                <div class="image-overlay"></div>
-                                            </a>
-                                        </div>
-                                        <div class="recent-post-content">
-                                            <span class="cat-links"><a href="category/world/index.html">World</a></span>                                            <a href="donec-pede-justo-fringilla-vel-aliquet-2/index.html">
-                                                The Workout Plan To Get Ripped Without Breaking                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div></div></div></div></div><div id="pg-38-2"  class="panel-grid panel-has-style" ><div class="panel-row-style panel-row-style-for-38-2" ><div id="pgc-38-2-0"  class="panel-grid-cell" ><div id="panel-38-2-0-0" class="so-panel widget widget_vmagazine_block_posts_ajax vmagazine_block_posts_ajax panel-first-child panel-last-child" data-index="9"><div class="panel-widget-style panel-widget-style-for-38-2-0-0">        <div class="vmagazine-mul-cat block-post-wrapper layout-two clearfix">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pg-38-2"  class="panel-grid panel-has-style" >
+                <div class="panel-row-style panel-row-style-for-38-2" >
+                    <div id="pgc-38-2-0"  class="panel-grid-cell" >
+                        <div id="panel-38-2-0-0" class="so-panel widget widget_vmagazine_block_posts_ajax vmagazine_block_posts_ajax panel-first-child panel-last-child" data-index="9">
+                            <div class="panel-widget-style panel-widget-style-for-38-2-0-0">
+                                <div class="vmagazine-mul-cat block-post-wrapper layout-two clearfix">
                                     <div class="block-header clearfix">
-                                        <h4 class="block-title"><span class="title-bg">
-World    </span></h4>
-                                        <div class="child-cat-tabs"><ul class="vmagazine-tab-links"><li class="active">
-                                                    <a href="javascript:void(0)" data-meta="show" data-id="2" data-slug="2" data-link="https://demo.accesspressthemes.com/vmagazine/demo-one/category/lifestyle/" data-layout="block_layout_2" data-count="6" data-length="0" data-btn="View All Posts">Lifestyle</a>
-                                                </li><li>
-                                                    <a href="javascript:void(0)" data-meta="show" data-id="3" data-slug="3" data-link="https://demo.accesspressthemes.com/vmagazine/demo-one/category/lifestyle/news/" data-layout="block_layout_2" data-count="6" data-length="0" data-btn="View All Posts">News</a>
-                                                </li><li>
-                                                    <a href="javascript:void(0)" data-meta="show" data-id="4" data-slug="4" data-link="https://demo.accesspressthemes.com/vmagazine/demo-one/category/lifestyle/photography/" data-layout="block_layout_2" data-count="6" data-length="0" data-btn="View All Posts">Photography</a>
-                                                </li></ul></div>            </div><!-- .block-header-->
+                                        <h4 class="block-title"><span class="title-bg">  World    </span></h4>
+                                        <div class="child-cat-tabs">
+                                        {{--    <ul class="vmagazine-tab-links">
+                                                <li>
+                                                    <a href="" data-meta="show" data-id="2" data-slug="2" data-link="" data-layout="block_layout_2" data-count="6" data-length="0" data-btn="View All Posts">Europe</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" data-meta="" data-id="3" data-slug="3" data-link="" data-layout="block_layout_2" data-count="6" data-length="0" data-btn="View All Posts">Asia</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" data-meta="show" data-id="4" data-slug="4" data-link="" data-layout="block_layout_2" data-count="6" data-length="0" data-btn="View All Posts">America</a>
+                                                </li>
+                                            </ul>--}}
+                                        </div>
+                                    </div>
                                     <div class="block-content-wrapper">
                                         <div class="block-loader" style="display:none;">
                                             <div class="sampleContainer">
@@ -696,247 +393,161 @@ World    </span></h4>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--------------------- World ------------------>
                                         <div class="block-cat-content 2">
-
-                                            <div class="left-post-wrapper wow fadeInDown" data-wow-duration="0.7s">                        <div class="single-post clearfix">
-                                                    <div class="post-thumb">
-                                                        <a class="thumb-zoom" href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/index.html" title="How to Pick the Most Comfortable, Spacious Seats on">
-                                                            <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/13-1-600x800.jpg" alt="How to Pick the Most Comfortable, Spacious Seats on" title="How to Pick the Most Comfortable, Spacious Seats on" />
-                                                            <div class="image-overlay"></div>
-                                                        </a>
-                                                        <span class="post-format-icon video-icon "><i class="icon_film"></i></span>                            </div><!-- .post-thumb -->
-                                                    <div class="post-caption-wrapper">
-                                                        <div class="post-caption-inner">
-                                                            <div class="post-meta clearfix">
-                                                                <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 25,2018</span><span class="comments"><i class="fa fa-comments"></i>9</span><span class="post-view"><i class="fa fa-eye"></i>1053</span>                                    </div>
-                                                            <h3 class="small-font">
-                                                                <a href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/index.html">
-                                                                    How to Pick the Most Comfortable, Spacious Seats on                                        </a>
-                                                            </h3>
-                                                        </div>
-
-                                                    </div><!-- .post-caption-wrapper -->
-
-                                                </div><!-- .single-post -->
-                                            </div><div class="left-post-wrapper wow fadeInDown" data-wow-duration="0.7s">                        <div class="single-post clearfix">
-                                                    <div class="post-thumb">
-                                                        <a class="thumb-zoom" href="nam-libero-tempore-cum-soluta-nobis-est-eligendi-optio-cumque-nihil-impedit-quo-minus-id-quod-maxime-placeat-facere/index.html" title="With its unique mix of cultures, languages and">
-                                                            <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/a7-600x761.jpg" alt="With its unique mix of cultures, languages and" title="With its unique mix of cultures, languages and" />
-                                                            <div class="image-overlay"></div>
-                                                        </a>
-                                                    </div><!-- .post-thumb -->
-                                                    <div class="post-caption-wrapper">
-                                                        <div class="post-caption-inner">
-                                                            <div class="post-meta clearfix">
-                                                                <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 25,2018</span><span class="comments"><i class="fa fa-comments"></i>26</span><span class="post-view"><i class="fa fa-eye"></i>2051</span>                                    </div>
-                                                            <h3 class="small-font">
-                                                                <a href="nam-libero-tempore-cum-soluta-nobis-est-eligendi-optio-cumque-nihil-impedit-quo-minus-id-quod-maxime-placeat-facere/index.html">
-                                                                    With its unique mix of cultures, languages and                                        </a>
-                                                            </h3>
-                                                        </div>
-
-                                                    </div><!-- .post-caption-wrapper -->
-
-                                                </div><!-- .single-post -->
-                                            </div><div class="right-posts-wrapper wow fadeInUp" data-wow-duration="0.7s">                        <div class="single-post clearfix">
-                                                    <div class="post-thumb">
-                                                        <a class="thumb-zoom" href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti-atque/index.html" title="At vero eos et accusamus et iusto odio dignissimos">
-                                                            <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-541520-100x70.jpg" alt="At vero eos et accusamus et iusto odio dignissimos" title="At vero eos et accusamus et iusto odio dignissimos" />
-                                                            <div class="image-overlay"></div>
-                                                        </a>
-                                                    </div><!-- .post-thumb -->
-                                                    <div class="post-caption-wrapper">
-                                                        <div class="post-caption-inner">
-                                                            <div class="post-meta clearfix">
-                                                                <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 23,2018</span><span class="comments"><i class="fa fa-comments"></i>9</span><span class="post-view"><i class="fa fa-eye"></i>469</span>                                    </div>
-                                                            <h3 class="small-font">
-                                                                <a href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti-atque/index.html">
-                                                                    At vero eos et accusamus et iusto odio dignissimos                                        </a>
-                                                            </h3>
-                                                        </div>
-
-                                                    </div><!-- .post-caption-wrapper -->
-
-                                                </div><!-- .single-post -->
+                                            @foreach($category_news(1, 2) as $news)
+                                            <div class="left-post-wrapper wow fadeInDown" data-wow-duration="0.7s">
                                                 <div class="single-post clearfix">
                                                     <div class="post-thumb">
-                                                        <a class="thumb-zoom" href="dolorem-eum-fugiat-quo-voluptas-nulla-pariatur-at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/index.html" title="Kim Kardashian of Photoshopping her body">
-                                                            <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-783243-100x70.jpg" alt="Kim Kardashian of Photoshopping her body" title="Kim Kardashian of Photoshopping her body" />
+                                                        <a class="thumb-zoom" href="" title="">
+                                                            <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="image" title="" />
                                                             <div class="image-overlay"></div>
                                                         </a>
-                                                    </div><!-- .post-thumb -->
+                                                        <span class="post-format-icon video-icon "><i class="icon_film"></i></span>
+                                                    </div>
                                                     <div class="post-caption-wrapper">
                                                         <div class="post-caption-inner">
                                                             <div class="post-meta clearfix">
-                                                                <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 23,2018</span><span class="comments"><i class="fa fa-comments"></i>9</span><span class="post-view"><i class="fa fa-eye"></i>677</span>                                    </div>
+                                                                <span class="posted-on"><i class="fa fa-clock-o"></i> {{ date('M j, Y', strtotime($news->updated)) }} </span>
+                                                                <span class="comments"><i class="fa fa-comments"></i> {{ $news->comment }} </span>
+                                                                <span class="post-view"><i class="fa fa-eye"></i> {{ $news->read }}</span>
+                                                            </div>
                                                             <h3 class="small-font">
-                                                                <a href="dolorem-eum-fugiat-quo-voluptas-nulla-pariatur-at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/index.html">
-                                                                    Kim Kardashian of Photoshopping her body                                        </a>
+                                                                <a href="">
+                                                                    {{ $news->title }}
+                                                                </a>
                                                             </h3>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
 
-                                                    </div><!-- .post-caption-wrapper -->
-
-                                                </div><!-- .single-post -->
+                                            <div class="right-posts-wrapper wow fadeInUp" data-wow-duration="0.7s">
+                                                @foreach($category_news(1, 4) as $news)
                                                 <div class="single-post clearfix">
                                                     <div class="post-thumb">
-                                                        <a class="thumb-zoom" href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti/index.html" title="&#8216;Firewatch&#8217; is Coming to Nintendo Switch &#8216;Soon&#8217;">
-                                                            <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-235922-100x70.jpg" alt="&#8216;Firewatch&#8217; is Coming to Nintendo Switch &#8216;Soon&#8217;" title="&#8216;Firewatch&#8217; is Coming to Nintendo Switch &#8216;Soon&#8217;" />
+                                                        <a class="thumb-zoom" href="" title="">
+                                                            <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                                                             <div class="image-overlay"></div>
                                                         </a>
                                                     </div><!-- .post-thumb -->
                                                     <div class="post-caption-wrapper">
                                                         <div class="post-caption-inner">
                                                             <div class="post-meta clearfix">
-                                                                <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 23,2018</span><span class="comments"><i class="fa fa-comments"></i>7</span><span class="post-view"><i class="fa fa-eye"></i>454</span>                                    </div>
+                                                                <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
+                                                                <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
+                                                                <span class="post-view"><i class="fa fa-eye"></i>{{ $news->comment }}</span>
+                                                            </div>
                                                             <h3 class="small-font">
-                                                                <a href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti/index.html">
-                                                                    &#8216;Firewatch&#8217; is Coming to Nintendo Switch &#8216;Soon&#8217;                                        </a>
+                                                                <a href="">
+                                                                   {{ $news->title }}
+                                                                </a>
                                                             </h3>
                                                         </div>
-
-                                                    </div><!-- .post-caption-wrapper -->
-
-                                                </div><!-- .single-post -->
-                                                <div class="single-post clearfix">
-                                                    <div class="post-thumb">
-                                                        <a class="thumb-zoom" href="maecenas-tempus-tellus-eget-condimentum-rhoncus-sem-quam-semper-libero-sit-amet-adipiscing-sem-neque-sed-ipsum/index.html" title="Google Home One-ups Echo, Now Lets You Call">
-                                                            <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-610293-100x70.jpg" alt="Google Home One-ups Echo, Now Lets You Call" title="Google Home One-ups Echo, Now Lets You Call" />
-                                                            <div class="image-overlay"></div>
-                                                        </a>
-                                                    </div><!-- .post-thumb -->
-                                                    <div class="post-caption-wrapper">
-                                                        <div class="post-caption-inner">
-                                                            <div class="post-meta clearfix">
-                                                                <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 23,2018</span><span class="comments"><i class="fa fa-comments"></i>11</span><span class="post-view"><i class="fa fa-eye"></i>690</span>                                    </div>
-                                                            <h3 class="small-font">
-                                                                <a href="maecenas-tempus-tellus-eget-condimentum-rhoncus-sem-quam-semper-libero-sit-amet-adipiscing-sem-neque-sed-ipsum/index.html">
-                                                                    Google Home One-ups Echo, Now Lets You Call                                        </a>
-                                                            </h3>
-                                                        </div>
-
-                                                    </div><!-- .post-caption-wrapper -->
-
-                                                </div><!-- .single-post -->
-                                                <span class="view-all"><a href="category/lifestyle/index.html">View All Posts</a></span>
+                                                    </div>
+                                                </div>
+                                                @endforeach
+                                                <span class="view-all"><a href="">View All Posts</a></span>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div><!-- .block-post-wrapper -->
-                            </div></div></div><div id="pgc-38-2-1"  class="panel-grid-cell" ><div id="panel-38-2-1-0" class="so-panel widget widget_vmagazine_medium_ad vmagazine_medium_ad panel-first-child panel-last-child" data-index="10"><div class="panel-widget-style panel-widget-style-for-38-2-1-0">            <div class="vmagazine-medium-rectangle-ad medium-rectangle-wrapper">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pgc-38-2-1"  class="panel-grid-cell" >
+                        <div id="panel-38-2-1-0" class="so-panel widget widget_vmagazine_medium_ad vmagazine_medium_ad panel-first-child panel-last-child" data-index="10">
+                            <div class="panel-widget-style panel-widget-style-for-38-2-1-0">
+                                <div class="vmagazine-medium-rectangle-ad medium-rectangle-wrapper">
                                     <a href="#" target="_blank">
                                         <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/ads5.jpg" alt="Home" title="Home" />
                                     </a>
                                 </div>
-                            </div></div></div></div></div><div id="pg-38-3"  class="panel-grid panel-has-style" ><div class="siteorigin-panels-stretch panel-row-style panel-row-style-for-38-3" data-stretch-type="full-stretched" ><div id="pgc-38-3-0"  class="panel-grid-cell" ><div id="panel-38-3-0-0" class="so-panel widget widget_vmagazine_category_posts_slider vmagazine_category_posts_slider panel-first-child panel-last-child" data-index="11">        <div class="vmagazine-cat-slider block-post-wrapper block_layout_1 has-bg" style="background-image: url(wp-content/uploads/sites/2/2018/04/d6.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pg-38-3"  class="panel-grid panel-has-style" >
+                  <div class="siteorigin-panels-stretch panel-row-style panel-row-style-for-38-3" data-stretch-type="full-stretched" >
+                    <div id="pgc-38-3-0"  class="panel-grid-cell" >
+                        <div id="panel-38-3-0-0" class="so-panel widget widget_vmagazine_category_posts_slider vmagazine_category_posts_slider panel-first-child panel-last-child" data-index="11">
+                            <div class="vmagazine-cat-slider block-post-wrapper block_layout_1 has-bg" style="background-image: url(/vnews/wp-content/uploads/sites/2/2018/04/d6.jpg)">
+                                <div class="content-wrapper-featured-slider">
+                                    <h4 class="block-title"><span class="title-bg"> Food </span></h4>
+                                    <ul class="widget-cat-slider cS-hidden">
+                                        <!--------------------------- Foood ---------------------->
+                                        @foreach($category_news(8,4,3) as $news)
+                                        <li class="single-post clearfix">
+                                            <div class="post-thumb">
+                                                <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
+                                            </div>
+                                            <div class="post-caption">
+                                                <span class="cat-links"><a href="category/fun/index.html" class="cat-53" rel="category tag">{{ $category_name($news->category) }}</a>
+                                                    <a href="category/sports/index.html" class="cat-30" rel="category tag">{{ $category_name($news->sub_category) }}</a></span>
+                                                <div class="post-meta">
+                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
+                                                    <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
+                                                    <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
+                                                </div>
+                                                <h3 class="extra-large-font">
+                                                    <a href="">
+                                                        {{ $news->title }}
+                                                    </a>
+                                                </h3>
+                                                <p>{{  $news->lead }}
+                                                 <span class="read-more"><a href="with-one-of-australias-largest-and-most-comprehensive/index.html">Read More</a></span>
+                                                </p>
+                                            </div><!-- .post-caption -->
+                                        </li>
 
-                                <div class="content-wrapper-featured-slider">                <h4 class="block-title"><span class="title-bg">
-Food    </span></h4>
-                                    <ul class="widget-cat-slider cS-hidden">                            <li class="single-post clearfix">
-                                            <div class="post-thumb">
-                                                <img src="wp-content/uploads/sites/2/2018/04/111-1200x500.jpg" alt="" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
-                                            </div>
-                                            <div class="post-caption">
-                                                <span class="cat-links"><a href="category/fun/index.html" class="cat-53" rel="category tag">Fun</a><a href="category/sports/index.html" class="cat-30" rel="category tag">Sports</a></span>                                    <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span><span class="comments"><i class="fa fa-comments"></i>3941</span><span class="post-view"><i class="fa fa-eye"></i>505285</span>                                    </div>
-                                                <h3 class="extra-large-font">
-                                                    <a href="with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                        </a>
-                                                </h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur rid                                                                            <span class="read-more">
-                                          <a href="with-one-of-australias-largest-and-most-comprehensive/index.html">Read More</a>
-                                      </span>
-                                                </p>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
-                                        <li class="single-post clearfix">
-                                            <div class="post-thumb">
-                                                <img src="wp-content/uploads/sites/2/2018/04/imgx1-1200x500.jpg" alt="" title="World Renown Speaker Zackery  Stumped Ethic on a serious note" />
-                                            </div>
-                                            <div class="post-caption">
-                                                <span class="cat-links"><a href="category/entertainment/index.html" class="cat-27" rel="category tag">Entertainment</a><a href="category/fun/index.html" class="cat-53" rel="category tag">Fun</a><a href="category/gaming/index.html" class="cat-28" rel="category tag">Gaming</a><a href="category/science/index.html" class="cat-33" rel="category tag">Science</a></span>                                    <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>1795</span><span class="post-view"><i class="fa fa-eye"></i>134034</span>                                    </div>
-                                                <h3 class="extra-large-font">
-                                                    <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                                        World Renown Speaker Zackery  Stumped Ethic on a serious note                                        </a>
-                                                </h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur rid                                                                            <span class="read-more">
-                                          <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">Read More</a>
-                                      </span>
-                                                </p>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
-                                        <li class="single-post clearfix">
-                                            <div class="post-thumb">
-                                                <img src="wp-content/uploads/sites/2/2018/04/imgx3-1200x500.jpg" alt="" title="How to Refresh Your Purse Game in a Snap and Play" />
-                                            </div>
-                                            <div class="post-caption">
-                                                <span class="cat-links"><a href="category/entertainment/index.html" class="cat-27" rel="category tag">Entertainment</a><a href="category/science/index.html" class="cat-33" rel="category tag">Science</a><a href="category/swiming/index.html" class="cat-54" rel="category tag">Swimming</a></span>                                    <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>48</span><span class="post-view"><i class="fa fa-eye"></i>2662</span>                                    </div>
-                                                <h3 class="extra-large-font">
-                                                    <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                                        How to Refresh Your Purse Game in a Snap and Play                                        </a>
-                                                </h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur rid                                                                            <span class="read-more">
-                                          <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">Read More</a>
-                                      </span>
-                                                </p>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
-                                        <li class="single-post clearfix">
-                                            <div class="post-thumb">
-                                                <img src="wp-content/uploads/sites/2/2018/04/imagx4-1200x500.jpg" alt="" title="Prejudiced? My kids are black, says Kate Middleton" />
-                                            </div>
-                                            <div class="post-caption">
-                                                <span class="cat-links"><a href="category/entertainment/index.html" class="cat-27" rel="category tag">Entertainment</a><a href="category/science/index.html" class="cat-33" rel="category tag">Science</a></span>                                    <div class="post-meta">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>3087</span><span class="post-view"><i class="fa fa-eye"></i>39529</span>                                    </div>
-                                                <h3 class="extra-large-font">
-                                                    <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                                        Prejudiced? My kids are black, says Kate Middleton                                        </a>
-                                                </h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur rid                                                                            <span class="read-more">
-                                          <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">Read More</a>
-                                      </span>
-                                                </p>
-                                            </div><!-- .post-caption -->
-                                        </li><!-- .single-post -->
-                                    </ul>        </div><!-- .content-wrapper -->
+                                        @endforeach
+                                    </ul>
+                                </div><!-- .content-wrapper -->
                             </div><!-- .block-post-wrapper -->
-                        </div></div></div></div><div id="pg-38-4"  class="panel-grid panel-has-style" ><div class="panel-row-style panel-row-style-for-38-4" ><div id="pgc-38-4-0"  class="panel-grid-cell" ><div id="panel-38-4-0-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="12"><div class="panel-widget-style panel-widget-style-for-38-4-0-0">    <div class="vmagazine-grid-list-wrapp grid no-desc">
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div id="pg-38-4"  class="panel-grid panel-has-style" >
+                <div class="panel-row-style panel-row-style-for-38-4" >
+                    <div id="pgc-38-4-0"  class="panel-grid-cell" >
+                        <div id="panel-38-4-0-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="12">
+                            <div class="panel-widget-style panel-widget-style-for-38-4-0-0">
+                                <div class="vmagazine-grid-list-wrapp grid no-desc">
                                     <div class="block-header clearfix">
-                                        <h4 class="block-title"><span class="title-bg">Recent News    </span></h4>
+                                        <h4 class="block-title"><span class="title-bg"> Gaming </span></h4>
                                     </div><!-- .block-header-->
                                     <div class="vmagazine-grid-list block-post-wrapper grid">
-
                                         <div class="posts-wrap">
-                                            <div class="single-post first-post clearfix wow fadeInUp" data-wow-duration="0.7s">
+                                            @foreach($category_news(4,3,14) as $news )
+
+                                           <div class="single-post first-post clearfix wow fadeInUp" data-wow-duration="0.7s" style="padding-bottom: 12px;">
                                                 <div class="post-thumb">
-                                                    <a class="thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html" title="World Renown Speaker Zackery  Stumped Ethic on a serious note">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imgx1-510x369.jpg" alt="World Renown Speaker Zackery  Stumped Ethic on a serious note" title="World Renown Speaker Zackery  Stumped Ethic on a serious note" />
+                                                    <a class="thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html" title="">
+                                                        <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                                                         <div class="image-overlay"></div>
                                                     </a>
                                                 </div><!-- .post-thumb -->
                                                 <div class="post-content-wrapper clearfix">
                                                     <div class="post-meta clearfix">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>1795</span><span class="post-view"><i class="fa fa-eye"></i>134034</span>                                </div><!-- .post-meta -->
-
+                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span>
+                                                        <span class="comments"><i class="fa fa-comments"></i>1795</span>
+                                                        <span class="post-view"><i class="fa fa-eye"></i>134034</span>
+                                                    </div><!-- .post-meta -->
                                                     <h3 class="large-font">
-                                                        <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                                            World Renown Speaker Zackery  Stumped Ethic on a serious note                                    </a>
+                                                        <a href="">
+                                                            {{ $news->title }}
+                                                        </a>
                                                     </h3>
-
-
                                                 </div><!-- .post-content-wrapper -->
                                             </div><!-- .single-post  -->
-                                            <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
+                                            @endforeach
+                                            {{--<div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
                                                 <div class="post-thumb">
                                                     <a class="thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html" title="How to Refresh Your Purse Game in a Snap and Play">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imgx3-320x224.jpg" alt="How to Refresh Your Purse Game in a Snap and Play" title="How to Refresh Your Purse Game in a Snap and Play" />
+                                                        <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                                                         <div class="image-overlay"></div>
                                                     </a>
                                                 </div><!-- .post-thumb -->
@@ -946,59 +557,27 @@ Food    </span></h4>
 
                                                     <h3 class="large-font">
                                                         <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                                            How to Refresh Your Purse Game in a Snap and Play                                    </a>
+                                                        {{$news->title}}
+                                                       </a>
                                                     </h3>
 
 
                                                 </div><!-- .post-content-wrapper -->
                                             </div><!-- .single-post  -->
-                                            <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
-                                                <div class="post-thumb">
-                                                    <a class="thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html" title="Prejudiced? My kids are black, says Kate Middleton">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imagx4-320x224.jpg" alt="Prejudiced? My kids are black, says Kate Middleton" title="Prejudiced? My kids are black, says Kate Middleton" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                </div><!-- .post-thumb -->
-                                                <div class="post-content-wrapper clearfix">
-                                                    <div class="post-meta clearfix">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>3087</span><span class="post-view"><i class="fa fa-eye"></i>39529</span>                                </div><!-- .post-meta -->
-
-                                                    <h3 class="large-font">
-                                                        <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                                            Prejudiced? My kids are black, says Kate Middleton                                    </a>
-                                                    </h3>
-
-
-                                                </div><!-- .post-content-wrapper -->
-                                            </div><!-- .single-post  -->
-                                            <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
-                                                <div class="post-thumb">
-                                                    <a class="thumb-zoom" href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/index.html" title="This is a great photo and nice style for shooting outdoor">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d6-320x224.jpg" alt="This is a great photo and nice style for shooting outdoor" title="This is a great photo and nice style for shooting outdoor" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                </div><!-- .post-thumb -->
-                                                <div class="post-content-wrapper clearfix">
-                                                    <div class="post-meta clearfix">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>51</span><span class="post-view"><i class="fa fa-eye"></i>85107</span>                                </div><!-- .post-meta -->
-
-                                                    <h3 class="large-font">
-                                                        <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/index.html">
-                                                            This is a great photo and nice style for shooting outdoor                                    </a>
-                                                    </h3>
-
-
-                                                </div><!-- .post-content-wrapper -->
-                                            </div><!-- .single-post  -->
+                                            @endforeach--}}
                                         </div>
                                         <span class="view-all"><a href="category/entertainment/index.html">View All Posts</a></span>
-
-
                                     </div><!-- .block-post-wrapper -->
                                 </div>
-                            </div></div></div><div id="pgc-38-4-1"  class="panel-grid-cell" ><div id="panel-38-4-1-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="13"><div class="panel-widget-style panel-widget-style-for-38-4-1-0">    <div class="vmagazine-grid-list-wrapp grid no-desc">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pgc-38-4-1"  class="panel-grid-cell" >
+                        <div id="panel-38-4-1-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="13">
+                            <div class="panel-widget-style panel-widget-style-for-38-4-1-0">
+                                <div class="vmagazine-grid-list-wrapp grid no-desc">
                                     <div class="block-header clearfix">
-                                        <h4 class="block-title"><span class="title-bg">Recent News    </span></h4>
+                                        <h4 class="block-title"><span class="title-bg"> News </span></h4>
                                     </div><!-- .block-header-->
                                     <div class="vmagazine-grid-list block-post-wrapper grid">
 
@@ -1041,54 +620,19 @@ Food    </span></h4>
 
                                                 </div><!-- .post-content-wrapper -->
                                             </div><!-- .single-post  -->
-                                            <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
-                                                <div class="post-thumb">
-                                                    <a class="thumb-zoom" href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti-atque/index.html" title="At vero eos et accusamus et iusto odio dignissimos">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-541520-320x224.jpg" alt="At vero eos et accusamus et iusto odio dignissimos" title="At vero eos et accusamus et iusto odio dignissimos" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                </div><!-- .post-thumb -->
-                                                <div class="post-content-wrapper clearfix">
-                                                    <div class="post-meta clearfix">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 23,2018</span><span class="comments"><i class="fa fa-comments"></i>9</span><span class="post-view"><i class="fa fa-eye"></i>469</span>                                </div><!-- .post-meta -->
-
-                                                    <h3 class="large-font">
-                                                        <a href="at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti-atque/index.html">
-                                                            At vero eos et accusamus et iusto odio dignissimos                                    </a>
-                                                    </h3>
-
-
-                                                </div><!-- .post-content-wrapper -->
-                                            </div><!-- .single-post  -->
-                                            <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
-                                                <div class="post-thumb">
-                                                    <a class="thumb-zoom" href="dolorem-eum-fugiat-quo-voluptas-nulla-pariatur-at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/index.html" title="Kim Kardashian of Photoshopping her body">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-783243-320x224.jpg" alt="Kim Kardashian of Photoshopping her body" title="Kim Kardashian of Photoshopping her body" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                </div><!-- .post-thumb -->
-                                                <div class="post-content-wrapper clearfix">
-                                                    <div class="post-meta clearfix">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Feb 23,2018</span><span class="comments"><i class="fa fa-comments"></i>9</span><span class="post-view"><i class="fa fa-eye"></i>677</span>                                </div><!-- .post-meta -->
-
-                                                    <h3 class="large-font">
-                                                        <a href="dolorem-eum-fugiat-quo-voluptas-nulla-pariatur-at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/index.html">
-                                                            Kim Kardashian of Photoshopping her body                                    </a>
-                                                    </h3>
-
-
-                                                </div><!-- .post-content-wrapper -->
-                                            </div><!-- .single-post  -->
                                         </div>
                                         <span class="view-all"><a href="category/lifestyle/index.html">View All Posts</a></span>
-
-
                                     </div><!-- .block-post-wrapper -->
                                 </div>
-                            </div></div></div><div id="pgc-38-4-2"  class="panel-grid-cell" ><div id="panel-38-4-2-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="14"><div class="panel-widget-style panel-widget-style-for-38-4-2-0">    <div class="vmagazine-grid-list-wrapp grid no-desc">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pgc-38-4-2"  class="panel-grid-cell" >
+                        <div id="panel-38-4-2-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="14">
+                            <div class="panel-widget-style panel-widget-style-for-38-4-2-0">
+                                <div class="vmagazine-grid-list-wrapp grid no-desc">
                                     <div class="block-header clearfix">
-                                        <h4 class="block-title"><span class="title-bg">
-Recent News    </span></h4>
+                                        <h4 class="block-title"><span class="title-bg"> Science </span></h4>
                                     </div><!-- .block-header-->
                                     <div class="vmagazine-grid-list block-post-wrapper grid">
 
@@ -1131,54 +675,23 @@ Recent News    </span></h4>
 
                                                 </div><!-- .post-content-wrapper -->
                                             </div><!-- .single-post  -->
-                                            <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
-                                                <div class="post-thumb">
-                                                    <a class="thumb-zoom" href="ut-enim-ad-minima-veniam-quis-nostrum-exercitationem/index.html" title="Ut enim ad minima veniam, quis nostrum">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-235922-320x224.jpg" alt="Ut enim ad minima veniam, quis nostrum" title="Ut enim ad minima veniam, quis nostrum" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                </div><!-- .post-thumb -->
-                                                <div class="post-content-wrapper clearfix">
-                                                    <div class="post-meta clearfix">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>12</span><span class="post-view"><i class="fa fa-eye"></i>483</span>                                </div><!-- .post-meta -->
-
-                                                    <h3 class="large-font">
-                                                        <a href="ut-enim-ad-minima-veniam-quis-nostrum-exercitationem/index.html">
-                                                            Ut enim ad minima veniam, quis nostrum                                    </a>
-                                                    </h3>
-
-
-                                                </div><!-- .post-content-wrapper -->
-                                            </div><!-- .single-post  -->
-                                            <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
-                                                <div class="post-thumb">
-                                                    <a class="thumb-zoom" href="donec-pede-justo-fringilla-vel-aliquet-nec/index.html" title="Donec pede justo, fringilla vel, aliquet nec">
-                                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/austin-neill-160129-unsplash-320x224.jpg" alt="Donec pede justo, fringilla vel, aliquet nec" title="Donec pede justo, fringilla vel, aliquet nec" />
-                                                        <div class="image-overlay"></div>
-                                                    </a>
-                                                </div><!-- .post-thumb -->
-                                                <div class="post-content-wrapper clearfix">
-                                                    <div class="post-meta clearfix">
-                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span><span class="comments"><i class="fa fa-comments"></i>4588</span><span class="post-view"><i class="fa fa-eye"></i>54798</span>                                </div><!-- .post-meta -->
-
-                                                    <h3 class="large-font">
-                                                        <a href="donec-pede-justo-fringilla-vel-aliquet-nec/index.html">
-                                                            Donec pede justo, fringilla vel, aliquet nec                                    </a>
-                                                    </h3>
-
-
-                                                </div><!-- .post-content-wrapper -->
-                                            </div><!-- .single-post  -->
                                         </div>
                                         <span class="view-all"><a href="category/sports/index.html">View All Posts</a></span>
-
-
                                     </div><!-- .block-post-wrapper -->
                                 </div>
-                            </div></div></div></div></div><div id="pg-38-5"  class="panel-grid panel-has-style" ><div class="panel-row-style panel-row-style-for-38-5" ><div id="pgc-38-5-0"  class="panel-grid-cell" ><div id="panel-38-5-0-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="15"><div class="panel-widget-style panel-widget-style-for-38-5-0-0">    <div class="vmagazine-grid-list-wrapp list element-has-desc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pg-38-5"  class="panel-grid panel-has-style" >
+                <div class="panel-row-style panel-row-style-for-38-5" >
+                    <div id="pgc-38-5-0"  class="panel-grid-cell" >
+                        <div id="panel-38-5-0-0" class="so-panel widget widget_vmagazine_block_grid_list vmagazine_block_grid_list panel-first-child panel-last-child" data-index="15">
+                            <div class="panel-widget-style panel-widget-style-for-38-5-0-0">
+                                <div class="vmagazine-grid-list-wrapp list element-has-desc">
                                     <div class="block-header clearfix">
-                                        <h4 class="block-title"><span class="title-bg">
-Sports    </span></h4>
+                                        <h4 class="block-title"><span class="title-bg">  Sports  </span></h4>
                                     </div><!-- .block-header-->
                                     <div class="vmagazine-grid-list block-post-wrapper list">
 
@@ -1661,5 +1174,5 @@ News    </span></h4>
                             </div></div></div></div></div></div>
     </div><!-- .vmagazine-home-wrapp -->
 </div>
-
+--}}
 @endsection

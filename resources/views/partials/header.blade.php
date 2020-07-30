@@ -164,6 +164,7 @@
                                             <li id="menu-item-871" class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-871 no-mega-menu"><a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/index.html">Point Review</a></li>
                                         </ul>
                                     </li>
+                                    <li id="menu-item-724" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-724 no-mega-menu"><a href="blogs/index.html">Travel</a></li>
                                 </ul>
                             </div>
                         </div><!-- .nav-wrapper -->
