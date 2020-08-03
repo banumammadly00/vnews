@@ -220,10 +220,9 @@
                     <div class="top-men-wrap">
                         <div class="top-menu">
                             <div class="top-men-wrapp">
-                                <ul id="top-menu" class="menu vmagazine_mega_menu"><li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-686 no-mega-menu"><a href="shop/index.html">Shop</a></li>
+                                <ul id="top-menu" class="menu vmagazine_mega_menu"><li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-686 no-mega-menu"><a href="shop/index.html">BLogs</a></li>
                                     <li id="menu-item-687" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-687 no-mega-menu"><a href="category/travel/index.html">Travel</a></li>
-                                    <li id="menu-item-688" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-688 no-mega-menu"><a href="category/gaming/index.html">Gaming</a></li>
-                                    <li id="menu-item-689" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-689 no-mega-menu"><a href="category/technology/index.html">Technology</a></li>
+                                    <li id="menu-item-688" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-688 no-mega-menu"><a href="category/gaming/index.html">Photography</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -296,53 +295,53 @@
                             </div>
                             <div class="menu-mmnu-container">
                                 <ul id="menu-primary-menu" class="menu vmagazine_mega_menu">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-38 current_page_item menu-item-has-children page_item page-item-42 no-mega-menu">
-                                        <a href="index.html">Home</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-609 no-mega-menu"><a href="https://demo.accesspressthemes.com/vmagazine/demo-two">Home Two</a></li>
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-610 no-mega-menu"><a href="https://demo.accesspressthemes.com/vmagazine/demo-three">Home Three</a></li>
-                                       </ul>
-                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-724 no-mega-menu"><a href="/vnews/blogs/index.html">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-724 no-mega-menu"><a href="/vnews/blogs/index.html">Blogs</a></li>
-                                   <!---------------------Life Style------------------>
+                                    <!----------------------------Life Style----------------------------->
                                     <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-45 has-mega-menu">
                                         <a href="/vnews/category/lifestyle/index.html">Lifestyle</a>
                                         <ul class="sub-menu mega-sub-menu mega-cat-menu has-menu-tab">
                                             <li class="menu-item-inner-mega clearfix">
                                                 <div class="ap-mega-menu-cat-wrap">
-                                                    <div class="mega-cat-all"><a href="/vnews/category/lifestyle/index.html" data-cat-id="2" class="mega-cat-menu">Sport</a></div>
-                                                    <div><a href="/vnews/category/lifestyle/news/index.html" data-cat-id="3" class="mega-cat-menu">Food</a></div>
-                                                    <div><a href="/vnews/category/lifestyle/photography/index.html" data-cat-id="4" class="mega-cat-menu">Magazine</a></div>
+                                                    <div class="mega-cat-all"><a href="#" data-cat-id="2" class="mega-cat-menu">Sport</a></div>
+                                                    <div><a href="#" data-cat-id="3" class="mega-cat-menu">Food</a></div>
+                                                    <div><a href="#" data-cat-id="4" class="mega-cat-menu">Magazine</a></div>
                                                 </div>
                                                 <div class="ap-mega-menu-con-wrap">
                                                     <div class="cat-con-section cat-con-id-2">
+                                                        @foreach($category_news(8,4,6) as $news)
                                                         <div class="menu-post-block">
                                                             <div class="mega-img-thumb">
                                                                 <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/02/12-1-510x369.jpg" alt="">
+                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="">
                                                                 </a>
                                                             </div>
-                                                            <h3><a href="" title="">London declares state of emergency as oil spill spreads...</a></h3>
-                                                        </div>
+                                                            <h3><a href="" title=""> {{ $news->title }} </a></h3>
+                                                       </div>
+                                                        @endforeach
                                                     </div>
                                                     <div class="cat-con-section cat-con-id-3">
+                                                        @foreach($category_news(8,4,3) as $news)
                                                         <div class="menu-post-block">
                                                             <div class="mega-img-thumb">
                                                                 <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/02/13-1-510x369.jpg" alt="">
+                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="">
                                                                 </a>
                                                             </div>
-                                                            <h3><a href="" title="">London declares state of emergency as oil spill spreads...</a></h3>
+                                                            <h3><a href="" title=""> {{ $news->title}} </a></h3>
                                                         </div>
+                                                        @endforeach
                                                     </div>
                                                     <div class="cat-con-section cat-con-id-4">
+                                                        @foreach($category_news(8,4,5) as $news)
                                                         <div class="menu-post-block">
                                                             <div class="mega-img-thumb">
                                                                 <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/02/13-1-510x369.jpg" alt=""></a>
+                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt=""></a>
                                                             </div>
-                                                            <h3><a href="" title="">How to Pick the Most Comfortable, Spacious Seats on</a></h3>
+                                                            <h3><a href="" title=""> {{ $news->title}} </a></h3>
                                                         </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </li>
@@ -356,14 +355,16 @@
                                             <li class="menu-item-inner-mega clearfix">
                                                 <div class="ap-mega-menu-con-wrap " >
                                                     <div class="cat-con-section cat-con-id-4">
+                                                        @foreach($category_news(2,5 ) as $news)
                                                         <div class="menu-post-block">
                                                             <div class="mega-img-thumb">
                                                                 <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/02/13-1-510x369.jpg" alt="">
+                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="">
                                                                 </a>
                                                             </div>
-                                                            <h3><a href="" title="">How to Pick the Most Comfortable, Spacious Seats on</a></h3>
+                                                            <h3><a href="" title=""> {{ $news->title}} </a></h3>
                                                         </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </li>
@@ -379,6 +380,7 @@
                                         </ul>
                                     </li>
 
+                                    <!----------------------------Technology----------------------------->
                                     {{--<li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-212 no-mega-menu"><a href="shop/index.html">Shop</a></li>--}}
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children page_item page-item-867 no-mega-menu"><a href="#">Technology</a>
                                         <ul class="sub-menu">
@@ -387,6 +389,7 @@
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-871 no-mega-menu"><a href="">Science</a></li>
                                         </ul>
                                     </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-724 no-mega-menu"><a href="/vnews/blogs/index.html">Travel</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -405,46 +408,16 @@
                     <div class="ticker-wrapp">
                         <div class="vmagazine-ticker-caption"><span>Recent News</span></div>
                         <ul id="vmagazine-news-ticker" >
+                            @foreach($recent_news as $news)
                             <li>
                                 <div class="single-news">
-                                    <a href="with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS
+                                    <a href="">
+                                        {{ $news->title }}
                                     </a>
-                                    <span class="date">Apr 12,2018 </span>
+                                    <span class="date">{{ date('M j, Y', strtotime($news->updated)) }} </span>
                                 </div>
                             </li>
-                            <li>
-                                <div class="single-news">
-                                    <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                        World Renown Speaker Zackery  Stumped Ethic on a serious note
-                                    </a>
-                                    <span class="date">Apr 5,2018</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="single-news">
-                                    <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                        How to Refresh Your Purse Game in a Snap and Play
-                                    </a>
-                                    <span class="date">Apr 5,2018  </span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="single-news">
-                                    <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/index.html">
-                                        Prejudiced? My kids are black, says Kate Middleton
-                                    </a>
-                                    <span class="date">Apr 5,2018 </span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="single-news">
-                                    <a href="donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/index.html">
-                                        This is a great photo and nice style for shooting outdoor
-                                    </a>
-                                    <span class="date">Apr 5,2018 </span>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
