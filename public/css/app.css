@@ -1,0 +1,24 @@
+.page-item  {
+    list-style-type:none;
+    float: left;
+    border-radius: 50%;
+    padding: 5px;
+}
+.page-link {
+    padding: 0rem 0.9rem;
+    color: #FFF;
+    background: #222;
+    border: 1px solid #eee;
+    display: inline-block;
+    height: 2.475rem;
+    line-height: 2.475rem;
+    vertical-align: top;
+    margin-left: 0.25rem;
+    min-width: 2.5rem;
+}
+
+.pagination {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}

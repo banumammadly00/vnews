@@ -220,7 +220,8 @@
                     <div class="top-men-wrap">
                         <div class="top-menu">
                             <div class="top-men-wrapp">
-                                <ul id="top-menu" class="menu vmagazine_mega_menu"><li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-686 no-mega-menu"><a href="shop/index.html">BLogs</a></li>
+                                <ul id="top-menu" class="menu vmagazine_mega_menu">
+                                    <li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-686 no-mega-menu"><a href="shop/index.html">BLogs</a></li>
                                     <li id="menu-item-687" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-687 no-mega-menu"><a href="category/travel/index.html">Travel</a></li>
                                     <li id="menu-item-688" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-688 no-mega-menu"><a href="category/gaming/index.html">Photography</a></li>
                                 </ul>
@@ -238,12 +239,13 @@
                         </div>
                         <!---------------------Search------------->
                         <div class="vmagazine-search-form-primary">
-                            <form method="get" class="search-form" action="">
+                            <form method="post" class="search-form" action="{{route('search.index')}}">
+                                @csrf
                                 <label>
                                     <span class="screen-reader-text">Search for:</span>
-                                    <input type="search" autocomplete="off" class="search-field" placeholder="Search ..." value="" name="s">
+                                    <input type="search" autocomplete="off" class="search-field" placeholder="Search ..." name="search">
                                 </label>
-                                <input type="submit" class="search-submit" value="Search">
+                                <input type="submit" class="search-submit" name=""search>
                             </form>
                         </div>
                         <div class="search-content"></div>
@@ -265,7 +267,7 @@
             <div class="logo-ad-wrapper">
                 <div class="vmagazine-container">
                     <div class="site-branding">
-                        <a href="index.html" class="custom-logo-link" rel="home">
+                        <a href="/" class="custom-logo-link" rel="home">
                             <img width="234" height="77" src="/vnews/wp-content/uploads/sites/2/2018/04/2018-04-11-2.png" class="custom-logo" alt="Vmagazine" />
                         </a>
                         <!--<div class="site-title-wrapper">
@@ -285,122 +287,9 @@
             -->
                 </div>
             </div>
+
             <!-----------------------Navbar--------------------->
-            <div class="vmagazine-nav-wrapper">
-                <div class="vmagazine-container">
-                    <nav id="site-navigation" class="main-navigation clearfix" >
-                        <div class="nav-wrapper">
-                            <div class="index-icon">
-                                <a href="index.html"><i class="fa fa-home"></i></a>
-                            </div>
-                            <div class="menu-mmnu-container">
-                                <ul id="menu-primary-menu" class="menu vmagazine_mega_menu">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-724 no-mega-menu"><a href="/vnews/blogs/index.html">Home</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-724 no-mega-menu"><a href="/vnews/blogs/index.html">Blogs</a></li>
-                                    <!----------------------------Life Style----------------------------->
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-45 has-mega-menu">
-                                        <a href="/vnews/category/lifestyle/index.html">Lifestyle</a>
-                                        <ul class="sub-menu mega-sub-menu mega-cat-menu has-menu-tab">
-                                            <li class="menu-item-inner-mega clearfix">
-                                                <div class="ap-mega-menu-cat-wrap">
-                                                    <div class="mega-cat-all"><a href="#" data-cat-id="2" class="mega-cat-menu">Sport</a></div>
-                                                    <div><a href="#" data-cat-id="3" class="mega-cat-menu">Food</a></div>
-                                                    <div><a href="#" data-cat-id="4" class="mega-cat-menu">Magazine</a></div>
-                                                </div>
-                                                <div class="ap-mega-menu-con-wrap">
-                                                    <div class="cat-con-section cat-con-id-2">
-                                                        @foreach($category_news(8,4,6) as $news)
-                                                        <div class="menu-post-block">
-                                                            <div class="mega-img-thumb">
-                                                                <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="">
-                                                                </a>
-                                                            </div>
-                                                            <h3><a href="" title=""> {{ $news->title }} </a></h3>
-                                                       </div>
-                                                        @endforeach
-                                                    </div>
-                                                    <div class="cat-con-section cat-con-id-3">
-                                                        @foreach($category_news(8,4,3) as $news)
-                                                        <div class="menu-post-block">
-                                                            <div class="mega-img-thumb">
-                                                                <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="">
-                                                                </a>
-                                                            </div>
-                                                            <h3><a href="" title=""> {{ $news->title}} </a></h3>
-                                                        </div>
-                                                        @endforeach
-                                                    </div>
-                                                    <div class="cat-con-section cat-con-id-4">
-                                                        @foreach($category_news(8,4,5) as $news)
-                                                        <div class="menu-post-block">
-                                                            <div class="mega-img-thumb">
-                                                                <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt=""></a>
-                                                            </div>
-                                                            <h3><a href="" title=""> {{ $news->title}} </a></h3>
-                                                        </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <span class="mega-sub-toggle"> <i class="fa fa-angle-right"></i> </span>
-                                    </li>
-                                    <!--------------------------Photography------------------------------>
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-110 has-mega-menu">
-                                        <a href="category/lifestyle/photography/index.html">Photography</a>
-                                        <ul class="sub-menu mega-sub-menu no-mega-cat-menu">
-                                            <li class="menu-item-inner-mega clearfix">
-                                                <div class="ap-mega-menu-con-wrap " >
-                                                    <div class="cat-con-section cat-con-id-4">
-                                                        @foreach($category_news(2,5 ) as $news)
-                                                        <div class="menu-post-block">
-                                                            <div class="mega-img-thumb">
-                                                                <a href="" title="">
-                                                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="">
-                                                                </a>
-                                                            </div>
-                                                            <h3><a href="" title=""> {{ $news->title}} </a></h3>
-                                                        </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children page_item page-item-114 no-mega-menu"><a href="#">World</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-109 no-mega-menu"><a href="category/travel/index.html">Europe</a></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-111 no-mega-menu"><a href="category/lifestyle/photography/index.html">Asia</a></li>
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-112 no-mega-menu"><a href="category/lifestyle/news/index.html">America</a></li>
-                                            {{--<li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-113 no-mega-menu"><a href="category/food/index.html">Food</a></li>--}}
-                                        </ul>
-                                    </li>
-
-                                    <!----------------------------Technology----------------------------->
-                                    {{--<li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-212 no-mega-menu"><a href="shop/index.html">Shop</a></li>--}}
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children page_item page-item-867 no-mega-menu"><a href="#">Technology</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-868 no-mega-menu"><a href="">Gaming</a></li>
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-870 no-mega-menu"><a href="">News</a></li>
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-871 no-mega-menu"><a href="">Science</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-724 no-mega-menu"><a href="/vnews/blogs/index.html">Travel</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                    <!--<ul class="site-header-cart">-->
-                    <!--<li class="cart-icon "><a href="cart/index.html"><span class="icon"><i class="icon_bag_alt"></i></span></a>-->
-                    <!--<span class="count">0</span>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                </div>
-            </div>
+            @include('partials.navbar')
 
             <!------------------Recent News----------------------->
             <div class="vmagazine-ticker-wrapper cS-hidden">
@@ -411,7 +300,7 @@
                             @foreach($recent_news as $news)
                             <li>
                                 <div class="single-news">
-                                    <a href="">
+                                    <a href="{{ route('news.index', $news->id) }}">
                                         {{ $news->title }}
                                     </a>
                                     <span class="date">{{ date('M j, Y', strtotime($news->updated)) }} </span>

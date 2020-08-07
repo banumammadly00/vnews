@@ -25,6 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer( ['partials.header','news.*'], CategoryNewsComposer::class);
+        View::composer( ['partials.header','news.*', 'categories.*'], CategoryNewsComposer::class);
     }
 }

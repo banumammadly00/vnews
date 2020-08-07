@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'NewsController@home');
-Route::get('/news/{id}', 'NewsController@index')->name('news.index');
+Route::get('/{id}', 'NewsController@index')->name('news.index');
+Route::get('category/{category}', 'CategoriesController@index')->name('category.index');
+Route::post('/search', 'SearchController@index')->name('search.index');

@@ -104,14 +104,15 @@
                 <a href="">
                  <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                  </a>
-                <span class="cat-links"><a href="#" class="cat-30" rel="category tag"> {{ $category_name($news->sub_category) }}</a></span>                            </div>
+                <span class="cat-links"><a href="#" class="cat-30" rel="category tag"> {{ $category_name($news->sub_category) }}</a></span>
+            </div>
              <div class="related-content-wrapper">
               <div class="post-meta">
                   <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
                   <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
                   <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
              </div>
-               <h3 class="small-font"><a href="">{{ $news->title }} </a></h3>
+               <h3 class="small-font"><a href="{{route('news.index', $news->id) }}">{{ $news->title }} </a></h3>
                  <div class="post-contents">  {{ $news->lead }} </div>
                  <a href="{{ route('news.index', $news->id) }}" class="vmagazine-related-more"> Read More </a>
              </div>
@@ -147,12 +148,12 @@
                </div>
                <div class="recent-post-content">
                  <span class="cat-links"><a href="#"> {{ $category_name( $news->sub_category ) }} </a></span>
-                 <a href="index.html"> {{ $news->title }} </a>
+                 <a href="{{ route('news.index', $news->id) }}"> {{ $news->title }} </a>
               </div>
            </div>
           @endforeach
       </div>
-        {{-- <div id="vmagazine_timeline_posts_list-2" class="widget vmagazine_timeline_posts_list">
+      {{--   <div id="vmagazine_timeline_posts_list-2" class="widget vmagazine_timeline_posts_list">
            <div class="vmagazine-timeline-post block-post-wrapper wow fadeInUp" data-wow-duration="1s">
                <h4 class="block-title"><span class="title-bg">   Post Timeline    </span></h4>
                  <div class="timeline-post-wrapper">
@@ -180,8 +181,9 @@
                     </div><!-- .single-post -->
                 </div>
            </div><!-- .block-post-wrapper -->
-         </div>
-      </div> --}}
+         </div>--}}
+      </div>
+     </div>
     </aside>
   </div>
 </div>

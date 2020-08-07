@@ -31,9 +31,9 @@
                                                 </div><!-- .post-meta -->
                                                 <h3 class="extra-large-font">
                                                 <a href="{{route('news.index', $news->id) }}">
-                                                        {{$news->title}}  </a>
+                                                        {{$news->title}}
+                                                </a>
                                                 </h3>
-
                                             </div><!-- .post-content-wrapper -->
 
                                         </div>
@@ -77,26 +77,26 @@
                                         </div>
                                         <!--------------------------- Recent News ---------------------->
                                         @foreach($recent_news as $news)
-                                        <div class="single-post first-post clearfix">
-                                            <div class="post-thumb">
-                                                <a class="thumb-zoom" href="" title="">
-                                                    <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
-                                                    <div class="image-overlay"></div>
-                                                </a>
-                                            </div>
-                                            <div class="content-wrapper">
-                                                <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{date('M j, Y', strtotime($news->updated))}}</span>
-                                                    <span class="comments"><i class="fa fa-comments"></i> {{ $news->comment }}</span>
-                                                    <span class="post-view"><i class="fa fa-eye"></i> {{ $news->read }} </span>
-                                                </div><!-- .post-meta -->
-                                                <h3 class="small-font">
-                                                    <a href="">
+                                            <div class="single-post first-post clearfix">
+                                                <div class="post-thumb">
+                                                    <a class="thumb-zoom" href="" title="">
+                                                        <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
+                                                        <div class="image-overlay"></div>
+                                                    </a>
+                                                </div>
+                                                <div class="content-wrapper">
+                                                    <div class="post-meta clearfix">
+                                                        <span class="posted-on"><i class="fa fa-clock-o"></i>{{date('M j, Y', strtotime($news->updated))}}</span>
+                                                        <span class="comments"><i class="fa fa-comments"></i> {{ $news->comment }}</span>
+                                                        <span class="post-view"><i class="fa fa-eye"></i> {{ $news->read }} </span>
+                                                    </div><!-- .post-meta -->
+                                                    <h3 class="small-font">
+                                                        <a href=" <a href="{{route('news.index', $news->id) }}">">
                                                         {{ $news->title }}
-                                                   </a>
-                                                </h3>
-                                            </div><!-- .content-wrapper -->
-                                        </div>
+                                                        </a>
+                                                    </h3>
+                                                </div><!-- .content-wrapper -->
+                                            </div>
                                         @endforeach
                                     </div>
                                 </div>
@@ -110,35 +110,37 @@
                                       <h4 class="block-title"><span class="title-bg"> Technology  </span></h4>
                             <div class="vmagazine-post-col block-post-wrapper block_layout_1 wow zoomIn" data-wow-duration="1s">
                                        <!-------------------------Technology---------------------->
-                                       @if($category_news(4,1,10)->first())
+                                       @if($category_news(4,10, 1)->first())
                                        <div class="block-header clearfix">
-                                        </div>
+                                           </div>
                                         <div class="single-post first-post clearfix">
                                             <div class="post-thumb">
                                                 <a class="thumb-zoom" href="" title="">
-                                                    <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $category_news(4,1,10)->first()->image}}" alt="" title=""/>
+                                                    <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $category_news(4,10,1)->first()->image}}" alt="" title=""/>
                                                     <div class="image-overlay"></div>
                                                 </a>
                                             </div>
                                             <div class="content-wrapper">
                                                 <div class="post-meta clearfix">
-                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{date('M j, Y', strtotime($category_news(4,1,10)->first()->updated))}}</span>
-                                                    <span class="comments"><i class="fa fa-comments"></i>{{$category_news(4,1,10)->first()->comment}}</span>
-                                                    <span class="post-view"><i class="fa fa-eye"></i>{{$category_news(4,1,10)->first()->read}}</span>
+                                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{date('M j, Y', strtotime($category_news(4,10, 1)->first()->updated))}}</span>
+                                                    <span class="comments"><i class="fa fa-comments"></i>{{$category_news(4,10)->first()->comment}}</span>
+                                                    <span class="post-view"><i class="fa fa-eye"></i>{{$category_news(4,10,1)->first()->read}}</span>
                                              </div><!-- .post-meta -->
                                                 <h3 class="large-font">
-                                                     <a href="">  {{ $category_news(4,1,10)->first()->title}}  </a>
+                                                     <a href="{{route('news.index', $news->id) }}">
+                                                         {{ $category_news(4,10, 1)->first()->title}}
+                                                     </a>
                                                 </h3>
-                                                <p> {{$category_news(4,1,10)->first()->lead}}</p>
-                                        </div>
+                                                 <p> {{$category_news(4,10, 1)->first()->lead}}</p>
+                                          </div>
                                         </div>
                                         @endif
-                                        @foreach($category_news(4,6,10) as $news)
+                                        @foreach($category_news(4,10, 6) as $news)
                                         @if($loop->index!=0)
                                         <div class="single-post bottom-post clearfix">
                                             <div class="content-wrapper">
                                                 <h3 class="small-font">
-                                                    <a href=""> {{ $news->title }} </a>
+                                                    <a href="{{route('news.index', $news->id) }}"> {{ $news->title }} </a>
                                                 </h3>
                                             </div><!-- .content-wrapper -->
                                         </div>
@@ -166,12 +168,12 @@
                                         <div class="slider-section slider-fullwidth">
                                             <ul class="featuredSlider cS-hidden">
                                                 <!---------------------------- Travel News ---------------------------->
-                                                @foreach( $category_news(15,4) as $news )
+                                                @foreach( $category_news(15,0,4) as $news )
                                                 <li class="slide">
                                                     <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="image" title="">
                                                     <div class="slider-caption">
                                                         <span class="cat-links">
-                                                            <a href="" class="cat-53" rel="category tag">{{ $category_name( $news->sub_category ) }}</a>
+                                                            <a href="" class="cat-53" rel="category tag">{{ $category_name( $news->category ) }}</a>
                                                             @if( $news->sub_category )
                                                             <a href="#" class="cat-30" rel="category tag" tabindex="0">{{  $category_name( $news->sub_category ) }}</a>
                                                             @endif
@@ -183,19 +185,18 @@
                                                         </div>
 
                                                         <h3 class="featured large-font">
-                                                            <a href="">
+                                                            <a href="{{route('news.index', $news->id) }}">
                                                              {{ $news->title }}
                                                             </a>
                                                         </h3>
                                                     </div>
                                                 </li>
-
                                                 @endforeach
                                             </ul>
                                         </div><!-- .slider-section -->
                                         <div class="featured-posts">
                                             <ul class="featuredpost">
-                                                @foreach( $category_news(15,4) as $news )
+                                                @foreach( $category_news(15,0,4) as $news )
                                                 <li class="f-slide post-thumb">
                                                     <a class="f-slider-img thumb-zoom" href="">
                                                         <img class="lazy" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
@@ -208,7 +209,7 @@
                                                             <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                         </div>
                                                         <h3 class="small-font">
-                                                            <a href="">
+                                                            <a href="{{route('news.index', $news->id) }}">
                                                                 {{ $news->title }}
                                                             </a>
                                                         </h3>
@@ -245,7 +246,7 @@
                                                     <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                 </div>
                                                 <h3 class="small-font">
-                                                    <a href="">
+                                                    <a href="{{route('news.index', $news->id)}}">
                                                         {{$news->title}}
                                                     </a>
                                                 </h3>
@@ -314,7 +315,7 @@
                         <div id="panel-38-1-2-3" class="so-panel widget widget_vmagazine_recent_post panel-last-child" data-index="8">
                             <div class="panel-widget-style panel-widget-style-for-38-1-2-3">
                                 <h4 class="block-title"><span class="title-bg">BLogs</span></h4>
-                                @foreach ($category_news(7,10) as $news)
+                                @foreach ($category_news(7,0,10) as $news)
                                 <div class="vmagazine-rec-posts recent-post-widget block_layout_1">
                                     <div class="recent-posts-content wow fadeInUp">
                                         <div class="image-recent-post post-thumb">
@@ -325,9 +326,7 @@
                                         </div>
                                         <div class="recent-post-content">
                                             <span class="cat-links"><a href="category/fun/index.html">Fun</a></span>
-                                         <a href="with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                                {{ $news->title}}
-                                         </a>
+                                         <a href="{{route('news.index', $news->id) }}">  {{ $news->title}}  </a>
                                         </div>
                                     </div>
                                 </div>
@@ -372,7 +371,7 @@
                                         </div>
                                         <!--------------------- World ------------------>
                                         <div class="block-cat-content 2">
-                                            @foreach($category_news(8, 2, 5) as $news)
+                                            @foreach($category_news(8, 5,2) as $news)
                                             <div class="left-post-wrapper wow fadeInDown" data-wow-duration="0.7s">
                                                 <div class="single-post clearfix">
                                                     <div class="post-thumb">
@@ -390,7 +389,7 @@
                                                                 <span class="post-view"><i class="fa fa-eye"></i> {{ $news->read }}</span>
                                                             </div>
                                                             <h3 class="small-font">
-                                                                <a href="">
+                                                                <a href="{{route('news.index', $news->id) }}">
                                                                     {{ $news->title }}
                                                                 </a>
                                                             </h3>
@@ -401,7 +400,7 @@
                                             @endforeach
 
                                             <div class="right-posts-wrapper wow fadeInUp" data-wow-duration="0.7s">
-                                                @foreach($category_news(8, 4, 5) as $news)
+                                                @foreach($category_news(8, 5,4) as $news)
                                                 <div class="single-post clearfix">
                                                     <div class="post-thumb">
                                                         <a class="thumb-zoom" href="" title="">
@@ -417,7 +416,7 @@
                                                                 <span class="post-view"><i class="fa fa-eye"></i>{{ $news->comment }}</span>
                                                             </div>
                                                             <h3 class="small-font">
-                                                                <a href="">
+                                                                <a href="{{route('news.index', $news->id) }}">
                                                                    {{ $news->title }}
                                                                 </a>
                                                             </h3>
@@ -455,7 +454,7 @@
                                     <h4 class="block-title"><span class="title-bg"> Photography </span></h4>
                                     <ul class="widget-cat-slider cS-hidden">
                                         <!--------------------------- Photography ---------------------->
-                                        @foreach($category_news(2,4) as $news)
+                                        @foreach($category_news(2,0,4) as $news)
                                         <li class="single-post clearfix">
                                             <div class="post-thumb">
                                                 <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
@@ -472,12 +471,12 @@
                                                     <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                 </div>
                                                 <h3 class="extra-large-font">
-                                                    <a href="">
+                                                    <a href="{{route('news.index', $news->id) }}">
                                                         {{ $news->title }}
                                                     </a>
                                                 </h3>
                                                 <p>{{  $news->lead }}
-                                                 <span class="read-more"><a href="with-one-of-australias-largest-and-most-comprehensive/index.html">Read More</a></span>
+                                                 <span class="read-more"><a href="">Read More</a></span>
                                                 </p>
                                             </div><!-- .post-caption -->
                                         </li>
@@ -502,7 +501,7 @@
                                     </div><!-- .block-header-->
                                     <div class="vmagazine-grid-list block-post-wrapper grid">
                                         <div class="posts-wrap">
-                                            @foreach($category_news(4,3,14) as $news )
+                                            @foreach($category_news(4,14,5) as $news )
                                             <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
                                                 <div class="post-thumb">
                                                     <a class="thumb-zoom" href="" title="">
@@ -517,7 +516,7 @@
                                                         <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>                                </div><!-- .post-meta -->
 
                                                     <h3 class="large-font">
-                                                        <a href="">
+                                                        <a href="{{route('news.index', $news->id) }}">
                                                            {{ $news->title}}
                                                         </a>
                                                     </h3>
@@ -562,7 +561,7 @@
 
                                                 </div><!-- .post-content-wrapper -->
                                             </div><!-- .single-post  --> --}}
-                                            @foreach($category_news(4,3,10) as $news )
+                                            @foreach($category_news(4,10,5) as $news )
                                             <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
                                                 <div class="post-thumb">
                                                     <a class="thumb-zoom" href="" title="">
@@ -574,7 +573,8 @@
                                                     <div class="post-meta clearfix">
                                                         <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
                                                         <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
-                                                        <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>                                </div><!-- .post-meta -->
+                                                        <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
+                                                    </div><!-- .post-meta -->
 
                                                     <h3 class="large-font">
                                                         <a href="">
@@ -586,7 +586,7 @@
                                             </div><!-- .single-post  -->
                                             @endforeach
                                         </div>
-                                        <span class="view-all"><a href="category/lifestyle/index.html">View All Posts</a></span>
+                                        <span class="view-all"><a href="">View All Posts</a></span>
                                     </div><!-- .block-post-wrapper -->
                                 </div>
                             </div>
@@ -622,7 +622,7 @@
 
                                                 </div><!-- .post-content-wrapper -->
                                             </div><!-- .single-post  --> --}}
-                                            @foreach($category_news(4,3,9) as $news )
+                                            @foreach($category_news(4,9,5) as $news )
                                             <div class="single-post  clearfix wow fadeInUp" data-wow-duration="0.7s">
                                                 <div class="post-thumb">
                                                     <a class="thumb-zoom" href="" title="">
@@ -646,7 +646,7 @@
                                             </div><!-- .single-post  -->
                                             @endforeach
                                         </div>
-                                        <span class="view-all"><a href="category/sports/index.html">View All Posts</a></span>
+                                        <span class="view-all"><a href="">View All Posts</a></span>
                                     </div><!-- .block-post-wrapper -->
                                 </div>
                             </div>
@@ -665,7 +665,7 @@
                                     </div><!-- .block-header-->
                                     <div class="vmagazine-grid-list block-post-wrapper list">
                                         <div class="posts-wrap">
-                                            @foreach ($category_news(8, 5, 6) as $news)
+                                            @foreach ($category_news(8, 6,5) as $news)
                                             <div class="single-post first-post clearfix wow fadeInUp" data-wow-duration="0.7s">
                                                 <div class="post-thumb">
                                                     <a class="thumb-zoom" href="" title="">
@@ -684,7 +684,7 @@
                                                         <span class="post-view"><i class="fa fa-eye"></i>{{$news->read}}</span>
                                                 </div><!-- .post-meta -->
                                                     <h3 class="large-font">
-                                                        <a href="">
+                                                        <a href="{{route('news.index', $news->id) }}">
                                                             {{ $news->title }}
                                                         </a>
                                                     </h3>
@@ -697,11 +697,11 @@
 
                                                 </div><!-- .post-content-wrapper -->
                                             </div>
-                                            @endforeach
+                                           @endforeach
                                         </div>
                                         <div class="gl-posts" data-meta="show" data-cat="" data-paged="1" data-banner-offset="5" data-offset="latest_posts" data-type="list" data-id="5" data-length="330">
-                                            <a href="javascript:void(0)" class="vm-ajax-load-more">
-                                                <span>Load More Posts</span>
+                                            <a href="{{route('category.index', $news->sub_category)}}" class="vm-ajax-load-more">
+                                                <span>Show More Posts</span>
                                                 <i class="fa fa-refresh"></i>
                                             </a>
                                         </div>
@@ -717,14 +717,17 @@
                                 	<ul>
                                     @foreach($category_list as $category)
                                     <li class="cat-item cat-item-2">
-                                        <a href="category/entertainment/index.html">
+                                        <a href="">
                                         {{ $category->name}}
                                         </a>
                                       <span></span>
                                     </li>
                                     @endforeach
                                 </ul>
-                            </div></div><div id="panel-38-5-1-1" class="so-panel widget widget_vmagazine_medium_ad vmagazine_medium_ad panel-last-child" data-index="17">            <div class="vmagazine-medium-rectangle-ad medium-rectangle-wrapper">
+                            </div>
+                        </div>
+                        <div id="panel-38-5-1-1" class="so-panel widget widget_vmagazine_medium_ad vmagazine_medium_ad panel-last-child" data-index="17">
+                            <div class="vmagazine-medium-rectangle-ad medium-rectangle-wrapper">
                                 <a href="#" target="_self">
                                     <img class="lazy" data-src="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/06/adssss.png" alt="Home" title="Home" />
                                     <p>Advertisement</p>
@@ -746,7 +749,8 @@
                                                 <li><a href="javascript:void(0)" data-id="9" data-slug="9" data-offset="6">Travel</a></li>
                                                 <li><a href="javascript:void(0)" data-id="29" data-slug="29" data-offset="6">Technology</a></li>
                                             </ul> --}}
-                                        </div>            </div><!-- .block-header-->
+                                        </div>
+                                        </div><!-- .block-header-->
                                         <div class="block-content-wrapper">
                                             <div class="block-loader" style="display:none;">
                                                 <div class="sampleContainer">
@@ -760,16 +764,18 @@
                                             </div>
                                             <div class="block-cat-content 3" data-slug="3">
                                                 <div class="tab-cat-slider sl-before-load">
-                                                    @foreach($category_news(8,5,3) as $news)
+                                                    @foreach($category_news(8,3,5) as $news)
                                                      <div class="single-post">
                                                         <div class="post-thumb">
                                                             <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
                                                             <div class="image-overlay"></div>
-                                                            <span class="post-format-icon audio-icon"><i class="icon_volume-high_alt"></i></span>
+                                                            <span class="post-format-icon audio-icon">
+                                                                <i class="{{ $news->video ? 'icon_film' : 'icon_image' }}"></i>
+                                                            </span>
                                                          </div>
                                                         <div class="post-caption">
                                                             <h3 class="large-font">
-                                                                <a href="">
+                                                                <a href="{{route('news.index', $news->id) }}">
                                                                     {{ $news->title}}
                                                                 </a>
                                                             </h3>
@@ -786,7 +792,7 @@
                                     <div class="vmagazine-post-col block-post-wrapper block_layout_4 wow zoomIn" data-wow-duration="1s">
                                         <div class="block-header clearfix">
                                         </div><!-- .block-header-->
-                                        @foreach ($category_news(1,4, 11) as $news)
+                                        @foreach ($category_news(1,11,4) as $news)
                                         <div class="single-post first-post clearfix">
                                             <div class="post-thumb">
                                                 <a class="thumb-zoom" href="nam-libero-tempore-cum-soluta-nobis-est/index.html" title="These Fitness Tips Help Take Inches off Your Waistline">
@@ -801,7 +807,7 @@
                                                 <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                  </div>
                                                 <h3 class="small-font">
-                                                    <a href="">
+                                                    <a href="{{route('news.index', $news->id) }}">
                                                     {{ $news->title }}
                                                     </a>
                                                 </h3>
@@ -815,7 +821,7 @@
                                     <div class="vmagazine-post-col block-post-wrapper block_layout_4 wow zoomIn" data-wow-duration="1s">
                                         <div class="block-header clearfix">
                                         </div><!-- .block-header-->
-                                        @foreach ($category_news(1,4, 12) as $news)
+                                        @foreach ($category_news(1, 12,4) as $news)
                                         <div class="single-post first-post clearfix">
                                             <div class="post-thumb">
                                                 <a class="thumb-zoom" href="nam-libero-tempore-cum-soluta-nobis-est/index.html" title="These Fitness Tips Help Take Inches off Your Waistline">
@@ -830,7 +836,7 @@
                                                 <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                  </div>
                                                 <h3 class="small-font">
-                                                    <a href="">
+                                                    <a href="{{route('news.index', $news->id) }}">
                                                     {{ $news->title }}
                                                     </a>
                                                 </h3>
@@ -844,7 +850,7 @@
                                     <div class="vmagazine-post-col block-post-wrapper block_layout_4 wow zoomIn" data-wow-duration="1s">
                                         <div class="block-header clearfix">
                                         </div><!-- .block-header-->
-                                        @foreach ($category_news(1,4, 13) as $news)
+                                        @foreach ($category_news(1, 13,4) as $news)
                                         <div class="single-post first-post clearfix">
                                             <div class="post-thumb">
                                                 <a class="thumb-zoom" href="nam-libero-tempore-cum-soluta-nobis-est/index.html" title="These Fitness Tips Help Take Inches off Your Waistline">
@@ -859,7 +865,7 @@
                                                 <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
                                                  </div>
                                                 <h3 class="small-font">
-                                                    <a href="">
+                                                    <a href="{{route('news.index', $news->id) }}">
                                                     {{ $news->title }}
                                                     </a>
                                                 </h3>
@@ -876,5 +882,4 @@
         </div>
     </div><!-- .vmagazine-home-wrapp -->
 </div>
---}}
 @endsection

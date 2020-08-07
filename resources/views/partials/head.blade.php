@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en-US" itemscope itemtype="http://schema.org/WebPage">
-
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
@@ -35,7 +34,7 @@
     </style>
     <link rel='stylesheet' id='wp-block-library-css'  href='/vnews/wp-includes/css/dist/block-library/style.min03ec.css?ver=5.3.4' type='text/css' media='all' />
     <link rel='stylesheet' id='wc-block-style-css'  href='/vnews/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style747d.css?ver=2.4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='apss-font-awesome-css'  href='../maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.mine34c.css?ver=1.3.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='apss-font-awesome-css'  href='/maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.mine34c.css?ver=1.3.5' type='text/css' media='all' />
     <link rel='stylesheet' id='apss-font-opensans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans&amp;ver=5.3.4' type='text/css' media='all' />
     <link rel='stylesheet' id='apss-frontend-css-css'  href='/vnews/wp-content/plugins/accesspress-social-pro/css/share/frontende34c.css?ver=1.3.5' type='text/css' media='all' />
     <link rel='stylesheet' id='apsc-font-awesome-css'  href='/vnews/wp-content/plugins/accesspress-social-pro/css/counter/font-awesome/font-awesomee34c.css?ver=1.3.5' type='text/css' media='all' />
@@ -207,7 +206,7 @@
         /* ]]> */
     </script>
     <script type='text/javascript' src='/vnews/wp-content/plugins/wp-cookie-user-info-pro/assets/js/wpcui-frontend-scriptcb18.js?ver=1.0.9'></script>
-    <script type='text/javascript' src='ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont03ec.js?ver=5.3.4'></script>
+    <script type='text/javascript' src='/ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont03ec.js?ver=5.3.4'></script>
     <script type='text/javascript' src='/vnews/wp-content/plugins/wp-cookie-user-info-pro/assets/js/jquery.mCustomScrollbarcb18.js?ver=1.0.9'></script>
     <link rel='https://api.w.org/' href='/vnews/wp-json/index.html' />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/vnews/xmlrpc0db0.php?rsd" />
@@ -218,6 +217,9 @@
     <link rel='shortlink' href='/vnews/index.html' />
     <link rel="alternate" type="application/json+oembed" href="/vnews/wp-json/oembed/1.0/embed67cb.json?url=https%3A%2F%2Fdemo.accesspressthemes.com%2Fvmagazine%2Fdemo-one%2F" />
     <link rel="alternate" type="text/xml+oembed" href="/vnews/wp-json/oembed/1.0/embed806b?url=https%3A%2F%2Fdemo.accesspressthemes.com%2Fvmagazine%2Fdemo-one%2F&amp;format=xml" />
+
+    <link  rel="stylesheet" href="/css/app.css" />
+
     <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
     <style type="text/css">
         .site-title,
@@ -248,4 +250,5 @@
             -webkit-width: calc(100% - 7rem);
             width: calc(100% - 7rem);
         }		</style>
+
 </head>
