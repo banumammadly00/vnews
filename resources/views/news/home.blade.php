@@ -91,7 +91,7 @@
                                                         <span class="post-view"><i class="fa fa-eye"></i> {{ $news->read }} </span>
                                                     </div><!-- .post-meta -->
                                                     <h3 class="small-font">
-                                                        <a href=" <a href="{{route('news.index', $news->id) }}">">
+                                                        <a href="{{route('news.index', $news->id) }}">
                                                         {{ $news->title }}
                                                         </a>
                                                     </h3>
@@ -424,7 +424,7 @@
                                                     </div>
                                                 </div>
                                                 @endforeach
-                                                <span class="view-all"><a href="">View All Posts</a></span>
+                                                <span class="view-all"><a href="{{route('category.index',  $news->sub_category)}}">View All Posts</a></span>
                                             </div>
                                         </div>
                                     </div>
@@ -476,7 +476,7 @@
                                                     </a>
                                                 </h3>
                                                 <p>{{  $news->lead }}
-                                                 <span class="read-more"><a href="">Read More</a></span>
+                                                 <span class="read-more"><a href="{{route('news.index',  $news->id)}}">Read More</a></span>
                                                 </p>
                                             </div><!-- .post-caption -->
                                         </li>
@@ -525,7 +525,7 @@
                                             </div><!-- .single-post  -->
                                             @endforeach
                                         </div>
-                                        <span class="view-all"><a href="category/entertainment/index.html">View All Posts</a></span>
+                                        <span class="view-all"><a href="{{route('category.index',  $news->sub_category)}}">View All Posts</a></span>
                                     </div><!-- .block-post-wrapper -->
                                 </div>
                             </div>
@@ -586,7 +586,7 @@
                                             </div><!-- .single-post  -->
                                             @endforeach
                                         </div>
-                                        <span class="view-all"><a href="">View All Posts</a></span>
+                                        <span class="view-all"><a href="{{route('category.index',  $news->sub_category)}}">View All Posts</a></span>
                                     </div><!-- .block-post-wrapper -->
                                 </div>
                             </div>
@@ -646,7 +646,7 @@
                                             </div><!-- .single-post  -->
                                             @endforeach
                                         </div>
-                                        <span class="view-all"><a href="">View All Posts</a></span>
+                                        <span class="view-all"><a href="{{route('category.index',  $news->sub_category)}}">View All Posts</a></span>
                                     </div><!-- .block-post-wrapper -->
                                 </div>
                             </div>
@@ -717,7 +717,7 @@
                                 	<ul>
                                     @foreach($category_list as $category)
                                     <li class="cat-item cat-item-2">
-                                        <a href="">
+                                        <a href="{{route('category.index',  $category->id)}}">
                                         {{ $category->name}}
                                         </a>
                                       <span></span>

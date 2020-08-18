@@ -19,31 +19,33 @@
      </div>
 
 </div>
-<div class="vmagazine-container container-wrapp-inner">
-<div id="primary" class="content-area post-single-layout1 vmagazine-content">
-<main id="main" class="site-main" role="main">
-<article id="post-496" class="post-496 post type-post status-publish format-standard has-post-thumbnail hentry category-fun category-sports tag-fashion tag-trending">
+     <div class="vmagazine-container container-wrapp-inner">
+        <div id="primary" class="content-area post-single-layout1 vmagazine-content">
+        <main id="main" class="site-main" role="main">
+        <article id="post-496" class="post-496 post type-post status-publish format-standard has-post-thumbnail hentry category-fun category-sports tag-fashion tag-trending">
 
-<span class="cat-links">
-    <a href="#" class="cat-53" rel="category tag">{{ $category_name($news->category)}}</a>
-    <a href="#" class="cat-30" rel="category tag">{{ $category_name($news->sub_category)}}</a>
-</span>
-    <header class="entry-header">
-        <h1 class="entry-title">  {{ $news->title}}  </h1>
-    </header><!-- .entry-header -->
+        <span class="cat-links">
+            <a href="#" class="cat-53" rel="category tag">{{ $category_name($news->category)}}</a>
+            @if($news->sub_category)
+            <a href="#" class="cat-30" rel="category tag">{{ $category_name($news->sub_category)}}</a>
+            @endif
+        </span>
+            <header class="entry-header">
+                <h1 class="entry-title">  {{ $news->title}}  </h1>
+            </header><!-- .entry-header -->
 
-  <div class="entry-meta clearfix">
-     <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
-     <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
-     <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
-  </div><!-- .entry-meta -->
-<div class="entry-thumb">
-    <img width="1800" height="750" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" class="attachment-vmagazine-single-large size-vmagazine-single-large wp-post-image" alt="" srcset="" sizes="(max-width: 1800px) 100vw, 1800px" /></div>
-<div class="entry-content clearfix">
-  <div id="idTextPanel" class="jqDnR">
-      {{ $news->body }}
-  </div>
-</div>
+          <div class="entry-meta clearfix">
+             <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
+             <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
+             <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
+          </div><!-- .entry-meta -->
+        <div class="entry-thumb">
+            <img width="1800" height="750" src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" class="attachment-vmagazine-single-large size-vmagazine-single-large wp-post-image" alt="" srcset="" sizes="(max-width: 1800px) 100vw, 1800px" /></div>
+        <div class="entry-content clearfix">
+          <div id="idTextPanel" class="jqDnR">
+              {{ $news->body }}
+          </div>
+        </div>
     <div class="entry-content clearfix">
       <div class="post-tag">
             {{-- <span class="tag-title">Related tags : </span>
@@ -54,81 +56,128 @@
        </div>
         <div class="vmagazine-author-metabox clearfix">
         <h4 class="box-title">   <span class="title-bg">  About Author </span> </h4>
-
         <div class="vmag-author-wrapper">
-      <div class="author-avatar">
-        <a class="author-image" href="../author/access/index.html">
-            <img alt='' src='https://secure.gravatar.com/avatar/aa496834096bde1d0db4979ea69063ae?s=132&amp;d=mm&amp;r=g' class='avatar avatar-132 photo' height='132' width='132' />  </a>
-       </div><!-- .author-avatar -->
-    <div class="author-desc-wrapper">
-    <div class="author-desc-inner">
-        <div class="author-desc-first-wrapper">
-            <a class="author-title" href="../author/access/index.html">Access</a>
-              <span class="author-location"></span>
+            <div class="author-avatar">
+                <a class="author-image" href="">
+                    <img alt='' src='/storage/avatar.png' class='avatar avatar-132 photo' />
+                </a>
+            </div>
+            <div class="author-desc-wrapper">
+                <div class="author-desc-inner">
+                    <div class="author-desc-first-wrapper">
+                        <a class="author-title" href=""> {{ $author->name }}
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </div>
+                    <div class="author-social">
+                        <span class="social-icon-wrap"><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></span>
+                        <span class="social-icon-wrap"><a href="#" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></span>
+                        <span class="social-icon-wrap"><a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></span>
+                        <span class="social-icon-wrap"><a href="#" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></span>
+                        <span class="social-icon-wrap"><a href="#" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></span>
+                    </div><!-- .author-social -->
+                 </div>
+              <div class="author-description"> {{ $author->description }} </div>
+           </div><!-- .author-desc-wrapper-->
         </div>
-       <div class="author-social">
-             <span class="social-icon-wrap"><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></span>
-             <span class="social-icon-wrap"><a href="#" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></span>
-             <span class="social-icon-wrap"><a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></span>
-             <span class="social-icon-wrap"><a href="#" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></span>
-             <span class="social-icon-wrap"><a href="#" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></span>
-       </div><!-- .author-social -->
-   </div>
-    <div class="author-description"> About an author. </div>
-     </div><!-- .author-desc-wrapper-->
-    </div>
- </div><!--vmagazine-author-metabox-->
+     </div><!--vmagazine-author-metabox-->
 
-    <!----------------------Previous Article--------------------->
+    <!----------------------Previous & Next Article--------------------->
     <nav class="navigation post-navigation" role="navigation" aria-label="Posts">
        <h2 class="screen-reader-text">Post navigation</h2>
             <div class="nav-links">
                 <div class="nav-previous">
-                    <a href="{{ route('news.index', $news->id -1)}}" rel="prev">
-                    <span> Previous Article</span>
-                    <p> {{ $previous_news }} </p>
+                    <a href="{{ route('news.index', $news->id -1)}}" rel="prev"> <span> Previous Article</span>
+                    <p> {{ $news_by_id( $news->id -1) }} </p>
+                    </a>
+               </div>
+                <div class="nav-next" style="float: right;">
+                    <a href="" rel="next"> <span> Next Article</span>
+                        <p> {{ $news_by_id( $news->id +1 ) }}</p>
+                    </a>
+                </div>
+            </div>
+      </nav>
+ </div><!-- .entry-content -->
+
+
+        <div class="entry-content clearfix">
+         <div class="vmagazine-author-metabox clearfix">
+            <h4 class="box-title">   <span class="title-bg">  Comment Here </span> </h4>
+            @foreach($comments as $comment)
+            <div class="vmag-author-wrapper">
+                <div class="author-avatar" style="width: 7%;vertical-align: top ">
+                    <a class="author-image" href="">
+                        <img alt='' src='/storage/avatar.png' class='avatar avatar-100 photo' />
+                    </a>
+                </div>
+                 <div class="author-desc-wrapper">
+                    {{--<div class="author-desc-inner">--}}
+                        <div class="author-desc-first-wrapper">
+                            <a class="author-title" href="#"> {{ $comment->user_name }} </a>
+                        <div class="author-description">
+                            <p style="margin-bottom: 1px;"> {{ $comment->comment }}</p>
+                        </div>
+                        </div>
+                      {{--</div>--}}
+                 </div>
+                @if($comment->user_id== auth()->id())
+                <a href="{{ route( 'comment.delete', $comment->id ) }}" class="read-more">
+                    <i style="float: right;" class="fa fa-trash"></i>
                 </a>
+               @endif
             </div>
-      </div>
-    </nav>
-</div><!-- .entry-content -->
+            @endforeach
+       @if(auth()->id())
 
-    <div class="vmagazine-related-wrapper">
-      <h4 class="related-title">
-        <span class="title-bg">Related Articles</span>
-    </h4>
-    <div class="related-posts-wrapper clearfix">
-        @foreach($related_news as $news)
-        <div class="single-post">
-            <div class="post-thumb">
-                <a href="">
-                 <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
-                 </a>
-                <span class="cat-links"><a href="#" class="cat-30" rel="category tag"> {{ $category_name($news->sub_category) }}</a></span>
+                <form action="{{ route('comment.store', $news->id) }}" method="post">
+                    @csrf
+                    <div class="comment-text">
+                    <input type="text" name="comment" placeholder="Comment here..." style="height: 106%; border-radius: 3px; padding:2%;">
+                    </div>
+                    <div>
+                        <button type="submit" name="submit"  class="comment-button small-font">comment </button>
+                    </div><!--vmagazine-author-metabox-->
+                </form>
+        </div>
+    @else
+        <div id="respond" class="comment-respond">
+            <h4 id="reply-title" class="comment-reply-title">
+                <span class="title-bg">Comment here
+                    <small> <a rel="nofollow" id="cancel-comment-reply-link" href="" style="display:none;">Cancel reply</a></small>
+                </span>
+            </h4>
+           <p class="must-log-in">You must be <a href="{{ route('login') }}" style="color: rgb(203,40,97);">logged in</a> to post a comment.</p>
+        </div>
+    @endif
+
+            <div class="vmagazine-related-wrapper">
+                <h4 class="related-title">
+                    <span class="title-bg">Related Articles</span>
+                </h4>
+                <div class="related-posts-wrapper clearfix">
+                    @foreach($related_news as $news)
+                        <div class="single-post">
+                            <div class="post-thumb">
+                                <a href="">
+                                    <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="" title="" />
+                                </a>
+                                <span class="cat-links"><a href="#" class="cat-30" rel="category tag"> {{ $category_name($news->sub_category) }}</a></span>
+                            </div>
+                            <div class="related-content-wrapper">
+                                <div class="post-meta">
+                                    <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
+                                    <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
+                                    <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
+                                </div>
+                                <h3 class="small-font"><a href="{{route('news.index', $news->id) }}">{{ $news->title }} </a></h3>
+                                <div class="post-contents">  {{ $news->lead }} </div>
+                                <a href="{{ route('news.index', $news->id) }}" class="vmagazine-related-more"> Read More </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-             <div class="related-content-wrapper">
-              <div class="post-meta">
-                  <span class="posted-on"><i class="fa fa-clock-o"></i>{{ date('M j, Y', strtotime($news->updated)) }}</span>
-                  <span class="comments"><i class="fa fa-comments"></i>{{ $news->comment }}</span>
-                  <span class="post-view"><i class="fa fa-eye"></i>{{ $news->read }}</span>
-             </div>
-               <h3 class="small-font"><a href="{{route('news.index', $news->id) }}">{{ $news->title }} </a></h3>
-                 <div class="post-contents">  {{ $news->lead }} </div>
-                 <a href="{{ route('news.index', $news->id) }}" class="vmagazine-related-more"> Read More </a>
-             </div>
-       </div>
-       @endforeach
-    </div>
-   </div>
-
-<div id="respond" class="comment-respond">
-  <h4 id="reply-title" class="comment-reply-title">
-       <span class="title-bg">Comment here
-       <small> <a rel="nofollow" id="cancel-comment-reply-link" href="" style="display:none;">Cancel reply</a></small>
-      </span>
-  </h4>
-       <p class="must-log-in">You must be <a href="">logged in</a> to post a comment.</p>
-	</div>
    </article>
 </main>
 </div>

@@ -1,0 +1,152 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 28 Jul 2020 11:22:25 at https://demo.accesspressthemes.com/vmagazine/demo-one/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://demo.accesspressthemes.com/vmagazine/demo-one/ -O1 "C:\Users\Banu\Downloads\vnews" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:22:27	Warning: 	File not parsed, looks like binary: https://demo.accesspressthemes.com/robots.txt
+11:26:03	Warning: 	file not stored in cache due to bogus state (incomplete type with OK (200), size 4899): https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/clock-300x300.jpg
+11:26:16	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/ (from https://demo.accesspressthemes.com/vmagazine/demo-one/)
+11:27:17	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d6-600x400.jpg (from https://demo.accesspressthemes.com/vmagazine/demo-one/)
+11:27:17	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/imgx3-400x340.jpg (from https://demo.accesspressthemes.com/vmagazine/demo-one/)
+11:28:03	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/27-150x150.jpg (from https://demo.accesspressthemes.com/vmagazine/demo-one/)
+11:28:03	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4 (from https://demo.accesspressthemes.com/vmagazine/demo-one/)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Regular.eot? (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/share/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Regular.otf (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/share/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Regular.woff (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/share/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Regular.ttf (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/share/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Regular.svg (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/share/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Bold.eot? (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Bold.otf (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Bold.woff (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Bold.ttf (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/fonts/MyriadPro-Bold.svg (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:28:04	Warning: 	Retry after error 500 (Internal Server Error) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/images/black-bg-ie8.png (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/genericons-regular-webfont.eot (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/genericons.css?ver=5.3.4)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/genericons-regular-webfont.ttf (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/genericons.css?ver=5.3.4)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/genericons-regular-webfont.svg (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/genericons.css?ver=5.3.4)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/mCSB_buttons.png (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/wp-cookie-user-info-pro/assets/css/jquery.mCustomScrollbar.css?ver=1.0.9)
+11:28:04	Error: 	"Not Found" (404) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/themes/vmagazine/assets/library/mCustomScrollbar/mCSB_buttons.png (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/themes/vmagazine/assets/library/mCustomScrollbar/jquery.mCustomScrollbar.min.css?ver=1.1.7)
+11:28:07	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/b1-400x340.jpg (from https://demo.accesspressthemes.com/vmagazine/demo-one/category/lifestyle/)
+11:28:07	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=128
+11:28:07	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=128 to https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi-optio/
+11:28:07	Error: 	"Method Not Allowed" (405) at link https://demo.accesspressthemes.com/vmagazine/demo-one/xmlrpc.php (from https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi-optio/)
+11:28:14	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=67
+11:28:14	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=67 to https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi-optio-cumque-nihil-impedit-quo-minus-id-quod-maxime-placeat-facere-2/
+11:28:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.accesspressthemes.com%2Fvmagazine%2Fdemo-one%2Fnam-libero-tempore-cum-soluta-nobis-est-eligendi-optio-cumque-nihil-impedit-quo-minus-id-quod-maxime-placeat-facere-2%2F&format=xml (from https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi-optio-cumque-nihil-impedit-quo-minus-id-quod-maxime-placeat-facere-2/)
+11:28:14	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=65
+11:28:14	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=65 to https://demo.accesspressthemes.com/vmagazine/demo-one/at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/
+11:28:22	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=60
+11:28:22	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=60 to https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi-optio-cumque-nihil-impedit-quo-minus-id-quod-maxime-placeat-facere/
+11:28:27	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=35
+11:28:27	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=35 to https://demo.accesspressthemes.com/vmagazine/demo-one/ullam-corporis-suscipit-laboriosam-nisi-ut-aliquid-ex-ea-commodi-consequatur/
+11:28:33	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=33
+11:28:33	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=33 to https://demo.accesspressthemes.com/vmagazine/demo-one/sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit/
+11:28:33	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=26
+11:28:33	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=26 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-pede-justo-fringilla-vel-aliquet-nec-vulputate-eget-arcu-in-enim-justo-rhoncus-ut-imperdiet-a-venenatis-vitae-justo/
+11:28:33	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=20
+11:28:33	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=20 to https://demo.accesspressthemes.com/vmagazine/demo-one/dolorem-eum-fugiat-quo-voluptas-nulla-pariatur-at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium/
+11:28:33	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=14
+11:28:33	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=14 to https://demo.accesspressthemes.com/vmagazine/demo-one/maecenas-tempus-tellus-eget-condimentum-rhoncus-sem-quam-semper-libero-sit-amet-adipiscing-sem-neque-sed-ipsum/
+11:28:33	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/pexels-photo-610293-1920x1000.jpg (from https://demo.accesspressthemes.com/vmagazine/demo-one/maecenas-tempus-tellus-eget-condimentum-rhoncus-sem-quam-semper-libero-sit-amet-adipiscing-sem-neque-sed-ipsum/)
+11:29:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=312
+11:29:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=312 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/
+11:29:35	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=305
+11:29:35	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=305 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis/
+11:29:39	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=200
+11:29:39	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=200 to https://demo.accesspressthemes.com/vmagazine/demo-one/cart/
+11:29:39	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-admin/js/password-strength-meter.min.js?ver=5.3.4 (from https://demo.accesspressthemes.com/vmagazine/demo-one/cart/)
+11:30:08	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=496
+11:30:08	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=496 to https://demo.accesspressthemes.com/vmagazine/demo-one/with-one-of-australias-largest-and-most-comprehensive/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=308
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=308 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-2/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=303
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=303 to https://demo.accesspressthemes.com/vmagazine/demo-one/et-harum-quidem-rerum-facilis-est-et-expedita-distinctio-3/
+11:30:15	Warning: 	Retry after error -4 (No data (connection closed)) at link https://demo.accesspressthemes.com/vmagazine/demo-one/cum-soluta-nobis-est-eligendi-optio-cumque/feed/ (from https://demo.accesspressthemes.com/vmagazine/demo-one/cum-soluta-nobis-est-eligendi-optio-cumque/)
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=301
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=301 to https://demo.accesspressthemes.com/vmagazine/demo-one/cum-soluta-nobis-est-eligendi-optio-cumque/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=299
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=299 to https://demo.accesspressthemes.com/vmagazine/demo-one/sed-ut-perspiciatis-unde-omnis-iste/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=295
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=295 to https://demo.accesspressthemes.com/vmagazine/demo-one/quisque-rutrum-aenean-imperdiet-etiam/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=292
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=292 to https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=290
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=290 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-pede-justo-fringilla-vel-aliquet-2/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=23
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=23 to https://demo.accesspressthemes.com/vmagazine/demo-one/at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti-atque/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=18
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=18 to https://demo.accesspressthemes.com/vmagazine/demo-one/at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis-praesentium-voluptatum-deleniti/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=279
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=279 to https://demo.accesspressthemes.com/vmagazine/demo-one/aliquam-lorem-ante-dapibus-in-viverra-quis/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=277
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=277 to https://demo.accesspressthemes.com/vmagazine/demo-one/ut-enim-ad-minima-veniam-quis-nostrum-exercitationem/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=275
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=275 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-pede-justo-fringilla-vel-aliquet-nec/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=29
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=29 to https://demo.accesspressthemes.com/vmagazine/demo-one/et-harum-quidem-rerum-facilis-est-et-expedita-distinctio/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=288
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=288 to https://demo.accesspressthemes.com/vmagazine/demo-one/nulla-consequat-massa-quis-enim/
+11:30:15	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=286
+11:30:15	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=286 to https://demo.accesspressthemes.com/vmagazine/demo-one/velit-esse-quam-nihil-molestiae-consequatur/
+11:30:15	Warning: 	Retry after error 500 (Internal Server Error) at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/images/black-bg-ie8.png (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:30:17	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=237
+11:30:17	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=237 to https://demo.accesspressthemes.com/vmagazine/demo-one/nulla-consequat-massa-quis-enim-donec-pede-justo/
+11:30:22	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=12
+11:30:22	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=12 to https://demo.accesspressthemes.com/vmagazine/demo-one/aliquam-lorem-ante-dapibus-in-viverra-quis-feugiat-a-tellus-phasellus-viverra-nulla-ut-metus-varius-laoreet-quisque-rutrum/
+11:30:22	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=6
+11:30:22	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=6 to https://demo.accesspressthemes.com/vmagazine/demo-one/lorem-ipsum-dolor-sit-amet-consectetuer-adipiscing-elit-aenean-commodo-ligula-eget-dolor-aenean-massa/
+11:30:22	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=57
+11:30:22	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=57 to https://demo.accesspressthemes.com/vmagazine/demo-one/nulla-consequat-massa-quis-enim-donec-pede-justo-fringilla-vel-aliquet-nec-vulputate-eget-arcu/
+11:30:22	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=54
+11:30:22	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=54 to https://demo.accesspressthemes.com/vmagazine/demo-one/maecenas-tempus-tellus-eget-condimentum-rhoncus-sem-quam-semper-libero-sit-amet-adipiscing-sem-neque-sed-ipsum-nam-quam-nunc-blandit-vel/
+11:30:22	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=253
+11:30:22	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=253 to https://demo.accesspressthemes.com/vmagazine/demo-one/quis-autem-vel-eum-iure-reprehenderit-qui-in-ea-voluptate/
+11:30:22	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=261
+11:30:22	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=261 to https://demo.accesspressthemes.com/vmagazine/demo-one/et-harum-quidem-rerum-facilis-est-et-expedita-distinctio-2/
+11:30:23	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=203
+11:30:23	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=203 to https://demo.accesspressthemes.com/vmagazine/demo-one/product/heat-shower/
+11:30:23	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=214
+11:30:23	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=214 to https://demo.accesspressthemes.com/vmagazine/demo-one/product/king-chair/
+11:30:26	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=464
+11:30:26	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=464 to https://demo.accesspressthemes.com/vmagazine/demo-one/product/lamp-set/
+11:30:27	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=460
+11:30:27	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=460 to https://demo.accesspressthemes.com/vmagazine/demo-one/product/single-cover-bed/
+11:30:30	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=213
+11:30:30	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=213 to https://demo.accesspressthemes.com/vmagazine/demo-one/product/wall-clock/
+11:30:31	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=462
+11:30:31	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=462 to https://demo.accesspressthemes.com/vmagazine/demo-one/product/woo-logo/
+11:30:33	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=249
+11:30:33	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=249 to https://demo.accesspressthemes.com/vmagazine/demo-one/similique-sunt-in-culpa-qui-officia-deserunt-mollitia-animi/
+11:30:33	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=241
+11:30:33	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=241 to https://demo.accesspressthemes.com/vmagazine/demo-one/voluptatem-accusantium-doloremque-laudantium/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=310
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=310 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=239
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=239 to https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=251
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=251 to https://demo.accesspressthemes.com/vmagazine/demo-one/at-vero-eos-et-accusamus-et-iusto-odio-dignissimos-ducimus-qui-blanditiis/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=247
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=247 to https://demo.accesspressthemes.com/vmagazine/demo-one/aenean-commodo-ligula-eget-dolor-aenean/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=271
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=271 to https://demo.accesspressthemes.com/vmagazine/demo-one/donec-pede-justo-fringilla-vel-aliquet/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=267
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=267 to https://demo.accesspressthemes.com/vmagazine/demo-one/sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit-2/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=265
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=265 to https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi-2/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=263
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=263 to https://demo.accesspressthemes.com/vmagazine/demo-one/lorem-ipsum-dolor-sit-amet-consectetuer-adipiscing/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=243
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=243 to https://demo.accesspressthemes.com/vmagazine/demo-one/soluta-nobis-est-eligendi-optio-cumque-nihil-impedit/
+11:30:37	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=273
+11:30:37	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=273 to https://demo.accesspressthemes.com/vmagazine/demo-one/vivamus-elementum-semper-nisi-aenean-vulputate/
+11:30:37	Error: 	"Internal Server Error" (500) after 2 retries at link https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/images/black-bg-ie8.png (from https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/plugins/accesspress-social-pro/css/counter/frontend.css?ver=1.3.5)
+11:30:38	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=202
+11:30:38	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=202 to https://demo.accesspressthemes.com/vmagazine/demo-one/my-account/
+11:30:39	Warning: 	Moved Permanently for https://demo.accesspressthemes.com/vmagazine/demo-one/?p=340
+11:30:39	Warning: 	File has moved from https://demo.accesspressthemes.com/vmagazine/demo-one/?p=340 to https://demo.accesspressthemes.com/vmagazine/demo-one/nam-libero-tempore-cum-soluta-nobis-est-eligendi/attachment/27/
+
+HTTrack Website Copier/3.49-2 mirror complete in 8 minutes 17 seconds : 818 links scanned, 733 files written (48117995 bytes overall) [24592347 bytes received at 49481 bytes/sec], 30441325 bytes transferred using HTTP compression in 534 files, ratio 19%, 2.3 requests per connection
+(17 errors, 124 warnings, 0 messages)

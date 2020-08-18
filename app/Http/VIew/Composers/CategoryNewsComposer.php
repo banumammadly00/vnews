@@ -23,10 +23,9 @@ class CategoryNewsComposer
         };
         $recent_news = News::where('status', 1)->orderBy('updated', 'desc')->limit(7)->get();
 
-        $categories = function ($sub_category=0){
+        $categories = function ( $sub_category=0 ){
         return Categories::where(['status' => 1, 'sub_category' => $sub_category])->get();
         };
-
 
          $views->with([
              'category_news' =>  $category_news,

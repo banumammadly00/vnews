@@ -1,0 +1,9 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+demo.accesspressthemes.com	TRUE	/vmagazine/	FALSE	1999999999	woocommerce_items_in_cart	1
+demo.accesspressthemes.com	TRUE	/vmagazine/	FALSE	1999999999	wp_woocommerce_session_487c9cb99e0afe50314a7ad90ed48e37	95930d42a0c3249aaec642c45b853da3%7C%7C1596093807%7C%7C1596090207%7C%7C0ac17a2efac573474eb4d48475925f8a
+demo.accesspressthemes.com	TRUE	/vmagazine/	FALSE	1999999999	wordpress_test_cookie	WP+Cookie+check
+demo.accesspressthemes.com	TRUE	/vmagazine/	FALSE	1999999999	woocommerce_recently_viewed	203%7C214%7C464%7C460%7C462%7C213
+demo.accesspressthemes.com	TRUE	/vmagazine/	FALSE	1999999999	woocommerce_cart_hash	c4218c5e58f1a5c4e46f514b77218d27
+demo.accesspressthemes.com	TRUE	/	FALSE	1999999999	PHPSESSID	d3d0d7297b85a8a8486fcdaca2c240c1
+

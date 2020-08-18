@@ -4,51 +4,9 @@
             <div class="vmagazine-container">
                 <div class="block footer-widget-1">
                     <div id="vmagazine_recent_post-2" class="widget widget_vmagazine_recent_post">
-                        <h4 class="block-title"><span class="title-bg">Recent Posts </span></h4>
+                        <h4 class="block-title"><span class="title-bg">About</span></h4>
                         <div class="vmagazine-rec-posts recent-post-widget block_layout_2">
-                           {{-- <div class="recent-posts-content wow fadeInUp">
-                                <div class="image-recent-post post-thumb">
-                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html" class="thumb-zoom">
-                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vnews/wp-content/uploads/sites/2/2018/04/111-100x70.jpg" alt="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" title="Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS" />
-                                        <div class="image-overlay"></div>
-                                    </a>
-                                </div>
 
-                                <div class="recent-post-content">
-                                    <a href="/vnews/with-one-of-australias-largest-and-most-comprehensive/index.html">
-                                        Revealed: Blair government&#8217;s &#8216;inexcusable&#8217; PAYMENTS                                            </a>
-                                    <div class="posted-date">
-                                      <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 12,2018</span>                                            </div>
-                                </div>
-                              </div>
-                            <div class="recent-posts-content wow fadeInUp">
-                                <div class="image-recent-post post-thumb">
-                                    <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html" class="thumb-zoom">
-                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vnews/wp-content/uploads/sites/2/2018/04/imgx1-100x70.jpg" alt="World Renown Speaker Zackery  Stumped Ethic on a serious note" title="World Renown Speaker Zackery  Stumped Ethic on a serious note" />
-                                        <div class="image-overlay"></div>
-                                    </a>
-                                </div>
-                                <div class="recent-post-content">
-                                    <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-4/index.html">
-                                        World Renown Speaker Zackery  Stumped Ethic on a serious note                                            </a>
-                                    <div class="posted-date">
-                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span>                                            </div>
-                                </div>
-                            </div>
-                            <div class="recent-posts-content wow fadeInUp">
-                                <div class="image-recent-post post-thumb">
-                                    <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html" class="thumb-zoom">
-                                        <img class="lazy" data-src="https://demo.accesspressthemes.com/vnews/wp-content/uploads/sites/2/2018/04/imgx3-100x70.jpg" alt="How to Refresh Your Purse Game in a Snap and Play" title="How to Refresh Your Purse Game in a Snap and Play" />
-                                        <div class="image-overlay"></div>
-                                    </a>
-                                </div>
-                                <div class="recent-post-content">
-                                    <a href="/vnews/donec-quam-felis-ultricies-nec-pellentesque-eu-pretium-quis-3/index.html">
-                                        How to Refresh Your Purse Game in a Snap and Play                                            </a>
-                                    <div class="posted-date">
-                                        <span class="posted-on"><i class="fa fa-clock-o"></i>Apr 5,2018</span>                                            </div>
-                                </div>
-                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -58,30 +16,22 @@
                         <h4 class="widget-title"><span class="title-bg">
                         <span class="title-bg">Tags</span></span></h4>
                         <div class="tagcloud">
-                     {{--       <a href="tag/buildings/index.html" class="tag-cloud-link tag-link-38 tag-link-position-1" style="font-size: 16.4pt;" aria-label="buildings (2 items)">buildings<span class="tag-link-count"> (2)</span></a>
-                            <a href="tag/cricket/index.html" class="tag-cloud-link tag-link-51 tag-link-position-2" style="font-size: 16.4pt;" aria-label="cricket (2 items)">cricket<span class="tag-link-count"> (2)</span></a>
-                            <a href="tag/fashion/index.html" class="tag-cloud-link tag-link-49 tag-link-position-3" style="font-size: 16.4pt;" aria-label="fashion (2 items)">fashion<span class="tag-link-count"> (2)</span></a>
-                            <a href="tag/featured/index.html" class="tag-cloud-link tag-link-5 tag-link-position-4" style="font-size: 16.4pt;" aria-label="featured (2 items)">featured<span class="tag-link-count"> (2)</span></a>
-                            <a href="tag/lifestyle/index.html" class="tag-cloud-link tag-link-6 tag-link-position-5" style="font-size: 22pt;" aria-label="lifestyle (3 items)">lifestyle<span class="tag-link-count"> (3)</span></a>
-                            <a href="tag/shoes/index.html" class="tag-cloud-link tag-link-39 tag-link-position-6" style="font-size: 8pt;" aria-label="shoes (1 item)">shoes<span class="tag-link-count"> (1)</span></a>
-                            <a href="tag/sport/index.html" class="tag-cloud-link tag-link-52 tag-link-position-7" style="font-size: 8pt;" aria-label="sport (1 item)">sport<span class="tag-link-count"> (1)</span></a>
-                            <a href="tag/tips/index.html" class="tag-cloud-link tag-link-37 tag-link-position-8" style="font-size: 8pt;" aria-label="tips (1 item)">tips<span class="tag-link-count"> (1)</span></a>
-                            <a href="tag/top/index.html" class="tag-cloud-link tag-link-7 tag-link-position-9" style="font-size: 8pt;" aria-label="top (1 item)">top<span class="tag-link-count"> (1)</span></a>
-                            <a href="tag/trending/index.html" class="tag-cloud-link tag-link-36 tag-link-position-10" style="font-size: 22pt;" aria-label="trending (3 items)">trending<span class="tag-link-count"> (3)</span></a></div>
-                  --}}  </div>
+                          <a href="tag/buildings/index.html" class="tag-cloud-link tag-link-38 tag-link-position-1" style="font-size: 16.4pt;" aria-label="buildings (2 items)">buildings<span class="tag-link-count"> (2)</span></a>
+                      </div>
+                   </div>
                 </div>
 
                 <div class="block footer-widget-3">
                     <div id="nav_menu-2" class="widget widget_nav_menu"><h4 class="widget-title">
                             <span class="title-bg"><span class="title-bg">Navigation</span></span></h4>
                         <div class="menu-footer-menu-container">
-                            <ul id="menu-footer-menu" class="menu vmagazine_mega_menu"><li id="menu-item-131" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-131 no-mega-menu"><a href="category/lifestyle/index.html">Lifestyle</a></li>
-                          {{--      <li id="menu-item-132" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-132 no-mega-menu"><a href="category/lifestyle/photography/index.html">Photography</a></li>
-                                <li id="menu-item-133" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-133 no-mega-menu"><a href="category/lifestyle/news/index.html">News</a></li>
-                                <li id="menu-item-134" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-134 no-mega-menu"><a href="category/travel/index.html">Travel</a></li>
-                                <li id="menu-item-678" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-678 no-mega-menu"><a href="category/gaming/index.html">Gaming</a></li>
-                                <li id="menu-item-679" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-679 no-mega-menu"><a href="category/technology/index.html">Technology</a></li>
-                           --}} </ul>
+                            <ul id="menu-footer-menu" class="menu vmagazine_mega_menu">
+                              @foreach( $categories(0) as $category)
+                               <li id="menu-item-132" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-132 no-mega-menu">
+                                   <a href="{{ route('category.index', $category->id) }}">{{ $category->name }}</a>
+                               </li>
+                             @endforeach
+                         </ul>
                         </div>
                     </div>
                 </div>
@@ -90,43 +40,11 @@
                     <div id="media_gallery-2" class="widget widget_media_gallery"><h4 class="widget-title">
                         <span class="title-bg"><span class="title-bg">Gallery</span></span></h4>
                         <div id='gallery-1' class='gallery galleryid-38 gallery-columns-4 gallery-size-thumbnail'>
-                           {{-- <figure class='gallery-item'>
+                           <figure class='gallery-item'>
                                 <div class='gallery-icon landscape'>
                                     <a href='wp-content/uploads/sites/2/2018/02/b1.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/02/b1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/b1-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/b1-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/b1-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon portrait'>
-                                    <a href='wp-content/uploads/sites/2/2018/04/averie-woodard-111823-unsplash.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/04/averie-woodard-111823-unsplash-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/averie-woodard-111823-unsplash-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/averie-woodard-111823-unsplash-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/averie-woodard-111823-unsplash-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/04/c5.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/04/c5-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/c5-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/c5-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/c5-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/02/brooke-lark-250695-unsplash.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/02/brooke-lark-250695-unsplash-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/brooke-lark-250695-unsplash-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/brooke-lark-250695-unsplash-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/brooke-lark-250695-unsplash-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/04/app2.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/04/app2-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/app2-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/app2-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/app2-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/02/21.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/02/21-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/21-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/21-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/21-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/04/d6.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/04/d6-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d6-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d6-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d6-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/04/d8.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/04/d8-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d8-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d8-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/d8-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/04/27.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/04/27-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/27-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/27-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/27-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/04/28.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/04/28-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/28-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/28-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/04/28-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/02/31.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/02/31-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/31-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/31-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/31-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure><figure class='gallery-item'>
-                                <div class='gallery-icon landscape'>
-                                    <a href='wp-content/uploads/sites/2/2018/02/13-1.jpg'><img width="150" height="150" src="wp-content/uploads/sites/2/2018/02/13-1-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/13-1-150x150.jpg 150w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/13-1-300x300.jpg 300w, https://demo.accesspressthemes.com/vmagazine/demo-one/wp-content/uploads/sites/2/2018/02/13-1-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-                                </div></figure>--}}
+                                </div>
+                           </figure>
                         </div>
                     </div>
                 </div>
@@ -145,13 +63,8 @@
                        </div>
                     <div class="footer-nav">
                         <nav class="footer-navigation">
-                            <div class="menu-footer-menu-container"><ul id="footer-menu" class="menu vmagazine_mega_menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-131 no-mega-menu"><a href="category/lifestyle/index.html">Lifestyle</a></li>
-                                   {{-- <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-133 no-mega-menu"><a href="/vnews/category/lifestyle/news/index.html">News</a></li>
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-134 no-mega-menu"><a href="/vnews/category/travel/index.html">Travel</a></li>
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-678 no-mega-menu"><a href="/vnews/category/gaming/index.html">Gaming</a></li>
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-679 no-mega-menu"><a href="/vnews/category/technology/index.html">Technology</a></li>
-                                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-132 no-mega-menu"><a href="/vnews/category/lifestyle/photography/index.html">Photography</a></li>
-                             --}} </ul>
+                            <div class="menu-footer-menu-container">
+
                             </div>
                         </nav>
                     </div>
@@ -168,7 +81,7 @@
 </div>
 
 
-<!--<div class='apss-popup-overlay' id="apss-popup-overlay-email" style="display:none"></div>
+<div class='apss-popup-overlay' id="apss-popup-overlay-email" style="display:none"></div>
    <div class="apss_email_share_popup" style="display:none;">
        <div class='apss_email_share_popup_close'>X</div>
 	            <div class="apss_popup_top">
@@ -217,7 +130,7 @@
 </div>
             <input type="hidden" id="apss-current-url" value="https://demo.accesspressthemes.com:443/vmagazine/demo-one/"/>
                <span class="apss-temp" style="font-size:14px;position:relative;z-index:99999;"></span>
-            <input type="hidden" id="wpcui_page_type" value="static_home">-->
+            <input type="hidden" id="wpcui_page_type" value="static_home">
 
 <script type="text/javascript">
     var c = document.body.className;
@@ -283,6 +196,7 @@
 </script>
 <script type='text/javascript' src='/vnews/wp-content/plugins/siteorigin-panels/js/styling-21013.min2c4f.js?ver=2.10.13'></script>
 <script type="text/javascript">document.body.className = document.body.className.replace("siteorigin-panels-before-js","");</script>
+<script src="{{asset('js/app.js')}}"></script>
 
 </body>
 

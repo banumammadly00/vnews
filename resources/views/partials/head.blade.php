@@ -5,8 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="profile" href="https://gmpg.org/xfn/11">
     <title>Vmagazine &#8211; Premium WordPress Magazine Theme</title>
     <link rel='dns-prefetch' href='http://ajax.googleapis.com/' />
     <link rel='dns-prefetch' href='http://maxcdn.bootstrapcdn.com/' />
@@ -218,7 +220,9 @@
     <link rel="alternate" type="application/json+oembed" href="/vnews/wp-json/oembed/1.0/embed67cb.json?url=https%3A%2F%2Fdemo.accesspressthemes.com%2Fvmagazine%2Fdemo-one%2F" />
     <link rel="alternate" type="text/xml+oembed" href="/vnews/wp-json/oembed/1.0/embed806b?url=https%3A%2F%2Fdemo.accesspressthemes.com%2Fvmagazine%2Fdemo-one%2F&amp;format=xml" />
 
-    <link  rel="stylesheet" href="/css/app.css" />
+    <link  rel="stylesheet" href="/css/add.css" />
+    {{--<link  rel="stylesheet" href="/css/app.css" />--}}
+   {{-- <link  rel="stylesheet" href="{{ asset('css/apps.css') }}" >--}}
 
     <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
     <style type="text/css">

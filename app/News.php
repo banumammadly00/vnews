@@ -13,6 +13,16 @@ class News extends Model
 
     protected $fillable= [ 'title', 'body' , 'updated' ];
 
+    protected $casts = [
+        'status' => 1,
+    ];
+
+    public  function scopeActive($data){
+
+        return $data->where('status', 1);
+    }
+
+
     public function searchableAs()
     {
         return 'id';

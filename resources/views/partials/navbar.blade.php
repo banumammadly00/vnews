@@ -71,7 +71,7 @@
                                                                     <img src="/vnews/wp-content/uploads/sites/2/2018/04/{{ $news->image}}" alt="">
                                                                 </a>
                                                             </div>
-                                                            <h3><a href="" title=""> {{ $news->title}} </a></h3>
+                                                            <h3><a href="{{ route('news.index', $news->id) }}" title=""> {{ $news->title}} </a></h3>
                                                         </div>
                                                     @endforeach
                                                 </div>

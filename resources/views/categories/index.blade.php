@@ -71,9 +71,9 @@
                     </div>
                 </div>
                 <div class="archive-bottom-wrapper">
-                    <nav class="navigation pagination" >
+                    <nav class="navigation pagination" role="navigation" aria-label="Posts">
                         <div class="nav-links">
-                             {{ $news_by_category->onEachSide(1)->links()}}
+                             {{ $news_by_category->onEachSide(1)->links() }}
                         </div>
                     </nav>
                 </div>
@@ -82,7 +82,7 @@
             <aside id="secondary" class="widget-area vmagazine-sidebar" role="complementary">
                 <div class="theiaStickySidebar">
                     <div id="vmagazine_recent_post-3" class="widget widget_vmagazine_recent_post">
-                        <h4 class="block-title"><span class="title-bg">  Recent Posts   </span></h4>
+                        <h4 class="block-title"><span class="title-bg">  Recent News   </span></h4>
                         <div class="vmagazine-rec-posts recent-post-widget block_layout_1">
                             @foreach ($recent_news as $news)
                                 <div class="recent-posts-content wow fadeInUp">

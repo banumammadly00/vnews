@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'NewsController@home');
-Route::get('/{id}', 'NewsController@index')->name('news.index');
+Route::get('/news/{id}', 'NewsController@index')->name('news.index');
+Route::post('/news/{id}', 'CommentController@store')->name('comment.store');
+Route::get('/comment/delete/{id}','CommentController@delete')->name('comment.delete');
+
 Route::get('category/{category}', 'CategoriesController@index')->name('category.index');
 Route::post('/search', 'SearchController@index')->name('search.index');
+Auth::routes();
+

@@ -75,7 +75,8 @@
                             <div class="index-icon">
                                 <a href="index.html"><i class="fa fa-home"></i></a>
                             </div>
-                            <div class="menu-mmnu-container"><ul id="primary-menu" class="menu vmagazine_mega_menu">
+                            <div class="menu-mmnu-container">
+                                <ul id="primary-menu" class="menu vmagazine_mega_menu">
                                     <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-38 current_page_item menu-item-has-children page_item page-item-42 no-mega-menu"><a href="index.html">Home</a>
                                         <ul class="sub-menu">
                                             <li id="menu-item-609" class="menu-item menu-item-type-custom menu-item-object-custom page_item page-item-609 no-mega-menu"><a href="https://demo.accesspressthemes.com/vmagazine/demo-two">Home Two</a></li>
@@ -172,18 +173,10 @@
 
                     <ul class="site-header-cart">
                         <li class="cart-icon ">
-
-                            <a href="cart/index.html">
-					<span class="icon">
-						<i class="icon_bag_alt"></i>
-					</span>
-                            </a>
-                            <span class="count">
-					 0				 </span>
-
+                            <a href="cart/index.html"><span class="icon"><i class="icon_bag_alt"></i></span></a>
+                            <span class="count">0 </span>
                         </li>
                     </ul>
-
                 </div><!-- .vmagazine-container -->
             </div>
         </div>
@@ -221,9 +214,27 @@
                         <div class="top-menu">
                             <div class="top-men-wrapp">
                                 <ul id="top-menu" class="menu vmagazine_mega_menu">
-                                    <li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-686 no-mega-menu"><a href="shop/index.html">BLogs</a></li>
-                                    <li id="menu-item-687" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-687 no-mega-menu"><a href="category/travel/index.html">Travel</a></li>
-                                    <li id="menu-item-688" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-688 no-mega-menu"><a href="category/gaming/index.html">Photography</a></li>
+                                    @if( auth()->id())
+                                        <li class="nav-item dropdown">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name }} <span class="caret"></span>
+                                            </a>
+                                        </li>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="float:right;">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    @else
+                                        <li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-686 no-mega-menu"><a href="{{ route('login') }}">Login</a></li>
+                                        <li id="menu-item-687" class="menu-item menu-item-type-taxonomy menu-item-object-category page_item page-item-687 no-mega-menu"><a href="{{ route('register') }}">Sign up</a></li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
